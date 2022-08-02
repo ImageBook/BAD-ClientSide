@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar/Navbar';
 import { CgArrowLongDown } from 'react-icons/cg';
 import Hero from './Hero/Hero';
+import GroundCentral from './GroundCentral/GroundCentral';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 </div>
             </div>
             <Hero></Hero>
+            <GroundCentral></GroundCentral>
         </div>
     );
 };

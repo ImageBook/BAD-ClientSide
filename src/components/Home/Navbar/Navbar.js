@@ -33,8 +33,8 @@ const Navbar = () => {
     }
 
     return (
-        <div>
-            <div className='hidden lg:block lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
+        <div className='sticky top-0'>
+            <div className=' hidden lg:block lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
                 <div className='flex items-end py-7'>
                     <div onClick={goToHome} className='flex space-x-3 items-center mr-14  hover:cursor-pointer'>
                         <GiCrossedBones className='w-6 h-6'></GiCrossedBones>
