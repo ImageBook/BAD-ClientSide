@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar/Navbar';
 import { CgArrowLongDown } from 'react-icons/cg';
+import Hero from './Hero/Hero';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
                     GET PROPOSAL
                 </div>
             </div>
+            <Hero></Hero>
         </div>
     );
 };
