@@ -1,0 +1,16 @@
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.style-hover:hover {
+    color: #951d97;
+    transition: color .5s ease-in-out;
+    font-weight: 600;
+}
+
+.shadow-class{
+    box-shadow: 0 5px 21px 0px #00000047;
+    transition: all 0.2s linear;
+    
+}
