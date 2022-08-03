@@ -3,6 +3,11 @@ import Navbar from './Navbar/Navbar';
 import { CgArrowLongDown } from 'react-icons/cg';
 import Hero from './Hero/Hero';
 import GroundCentral from './GroundCentral/GroundCentral';
+import Runon from './Runon/Runon';
+import Cakemix from './Cakemix/Cakemix';
+import { GoPrimitiveDot } from 'react-icons/go';
+import { TbCircleDot } from 'react-icons/tb';
+import { HashLink } from 'react-router-hash-link';
 
 const Home = () => {
     return (
@@ -14,8 +19,17 @@ const Home = () => {
                     GET PROPOSAL
                 </div>
             </div>
+            <div className='hidden lg:block'>
+                <div className='fixed bottom-16 left-16   '>
+                    <HashLink to='/#ground-central' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                    <HashLink to='/#runon' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                    <HashLink to='/#cakemix' smooth><GoPrimitiveDot className='w-[14px] h-[14px] text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                </div>
+            </div>
             <Hero></Hero>
             <GroundCentral></GroundCentral>
+            <Runon></Runon>
+            <Cakemix></Cakemix>
         </div>
     );
 };
