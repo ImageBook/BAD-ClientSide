@@ -26,7 +26,7 @@ const child = {
 const Hero = () => {
     return (
         <motion.div variants={container} initial='hidden' animate='visible' className='flex flex-col lg:flex-row lg:justify-between items-center gap-20 lg:gap-0 lg:h-screen mt-10 md:mt-16 lg:-mt-10 w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
-            <div>
+            <div className='text-center lg:text-left'>
                 {/* add your own text */}
                 <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none'>BUILD</motion.p>
                 <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none md:-mt-5'>YOUR</motion.p>

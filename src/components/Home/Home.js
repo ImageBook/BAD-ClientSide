@@ -8,6 +8,7 @@ import Cakemix from './Cakemix/Cakemix';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { TbCircleDot } from 'react-icons/tb';
 import { HashLink } from 'react-router-hash-link';
+import HomeServices from './HomeServices/HomeServices';
 
 const Home = () => {
     return (
@@ -30,6 +31,7 @@ const Home = () => {
             <GroundCentral></GroundCentral>
             <Runon></Runon>
             <Cakemix></Cakemix>
+            <HomeServices></HomeServices>
         </div>
     );
 };
