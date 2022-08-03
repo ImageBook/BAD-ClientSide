@@ -14,10 +14,10 @@ const GetProposal = () => {
                 <p className='text-[56px] md:text-[100px] font-black  text-[#383841] leading-none md:-mt-2'>A REALITY</p>
                 <p className='text-[#383841] font-normal text-[16px] md:text-xl mt-1'>Let's get in touch. Connect with us via: <span className='font-semibold'>(+91)-90051-75380</span> or email: <span className='font-semibold'>digilabstechnologies@gmail.com</span>.</p>
                 <form onSubmit={handleContact} className='flex flex-col items-center lg:items-start justify-center space-y-3 mt-6'>
-                    <input className='w-80 2xl:w-[500px] h-16 border border-gray-500 rounded p-2 focus:outline-none' type="text" name="" id="" placeholder='Your Name *' required />
-                    <input className='w-80 2xl:w-[500px] h-16 border border-gray-500 rounded p-2 focus:outline-none' type="email" name="" id="" placeholder='Your Email *' required />
-                    <input className='w-80 2xl:w-[500px] h-16 border border-gray-500 rounded p-2 focus:outline-none' type="text" name="" id="" placeholder='Subject *' required />
-                    <textarea className='w-80 2xl:w-[500px] h-28 border border-gray-500 rounded p-2 focus:outline-none mb-2' name="" id="" placeholder='Your Message *' required></textarea>
+                    <input className='w-80 lg:w-[400px] 2xl:w-[500px] h-16 border border-gray-500 rounded p-2 focus:outline-none' type="text" name="" id="" placeholder='Your Name *' required />
+                    <input className='w-80 lg:w-[400px] 2xl:w-[500px] h-16 border border-gray-500 rounded p-2 focus:outline-none' type="email" name="" id="" placeholder='Your Email *' required />
+                    <input className='w-80 lg:w-[400px] 2xl:w-[500px] h-16 border border-gray-500 rounded p-2 focus:outline-none' type="text" name="" id="" placeholder='Subject *' required />
+                    <textarea className='w-80 lg:w-[400px] 2xl:w-[500px] h-28 border border-gray-500 rounded p-2 focus:outline-none mb-2' name="" id="" placeholder='Your Message *' required></textarea>
                     <div className='-ml-40 lg:-ml-0'>
                         <button type='submit' className='w-40 rounded-lg py-3 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold uppercase tracking-wide'>Submit</button>
                     </div>

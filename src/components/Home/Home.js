@@ -11,6 +11,7 @@ import { HashLink } from 'react-router-hash-link';
 import HomeServices from './HomeServices/HomeServices';
 import Clients from './Clients/Clients';
 import GetProposal from './GetProposal/GetProposal';
+import Footer from './Footer/Footer';
 
 const Home = () => {
     return (
@@ -36,6 +37,7 @@ const Home = () => {
             <HomeServices></HomeServices>
             <Clients></Clients>
             <GetProposal></GetProposal>
+            <Footer></Footer>
         </div>
     );
 };
