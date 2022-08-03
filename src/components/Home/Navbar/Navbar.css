@@ -9,8 +9,9 @@
     font-weight: 600;
 }
 
-.shadow-class{
+.shadow-class {
     box-shadow: 0 5px 21px 0px #00000047;
     transition: all 0.2s linear;
-    
+
 }
+

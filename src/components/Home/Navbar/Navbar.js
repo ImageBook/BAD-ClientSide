@@ -8,26 +8,30 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [serviceCheck, setServiceCheck] = useState(false);
+    const [serviceCheck2, setServiceCheck2] = useState(false);
     const [aboutCheck, setAboutCheck] = useState(false);
+    const [aboutCheck2, setAboutCheck2] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
     const [mobileServices, setMobileServices] = useState(false);
     const [mobileAbout, setMobileAbout] = useState(false);
     const navigate = useNavigate();
     const toggleServiceCheck = () => {
         setServiceCheck(true);
+        setServiceCheck2(true);
     }
     const toggleServiceCheck2 = () => {
         setServiceCheck(false);
+        setServiceCheck2(false);
     }
     const toggleAboutCheck = () => {
         setAboutCheck(true);
+        setAboutCheck2(true);
     }
     const toggleAboutCheck2 = () => {
         setAboutCheck(false);
+        setAboutCheck2(false);
     }
-    // const handleOpenMenu = () => {
-    //     setOpenMenu(true);
-    // }
+
     const goToHome = () => {
         navigate('/');
     }
@@ -42,48 +46,53 @@ const Navbar = () => {
                         <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>textapps</p>
                     </div>
                     <div className='flex space-x-8 text-[19px] font-normal tracking-wide'>
-                        <Link onMouseEnter={toggleServiceCheck} to='/services'>
-                            <p className='style-hover relative'>Services</p>
-                            {
-                                serviceCheck &&
-                                <div onMouseLeave={toggleServiceCheck2} className='absolute top-20 transition transform duration-500 ease-in-out -translate-y-4 border shadow-class rounded-lg text-base bg-white'>
-                                    <div className='flex items-center w-[470px] '>
-                                        <Link to='/services/iphone-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>iPhone App Development</p></Link>
-                                        <Link to='/services/web-design'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px]'>Web Design</p></Link>
+                        <Link to='/services'>
+                            <div className='relative'>
+                                <p onMouseEnter={toggleServiceCheck} onMouseLeave={toggleServiceCheck2} className='style-hover'>Services</p>
+                                {
+                                    ((serviceCheck && serviceCheck2) || (serviceCheck && !serviceCheck2) || (!serviceCheck && serviceCheck2)) &&
+                                    <div onMouseEnter={toggleServiceCheck} onMouseLeave={toggleServiceCheck2} className='absolute top-[44px] -left-4 transition transform duration-500 ease-in-out -translate-y-4 border shadow-class rounded-lg text-base bg-white'>
+                                        <div className='flex items-center w-[470px] '>
+                                            <Link to='/services/iphone-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>iPhone App Development</p></Link>
+                                            <Link to='/services/web-design'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px]'>Web Design</p></Link>
+                                        </div>
+                                        <div className='flex items-center w-[470px]'>
+                                            <Link to='/services/android-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Android App Development</p></Link>
+                                            <Link to='/services/web-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Web App Development</p></Link>
+                                        </div>
+                                        <div className='flex items-center w-[470px]'>
+                                            <Link to='/services/ui-ux-design'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>UI/UX Design</p></Link>
+                                            <Link to='/services/website-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Website Development</p></Link>
+                                        </div>
+                                        <div className='flex items-center w-[470px]'>
+                                            <Link to='/services/cross-platform-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Cross-Platform App Development</p></Link>
+                                            <Link to='/services/enterprise-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Enterprise App Development</p></Link>
+                                        </div>
+                                        <div className='flex items-center w-[470px]'>
+                                            <Link to='/services/ios-app-design'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>iOS App Design</p></Link>
+                                            <Link to='/services/mvp-for-startups'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>MVP for Startups</p></Link>
+                                        </div>
+                                        <div className='flex items-center w-[470px]'>
+                                            <Link to='/services/mobile-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Mobile App Development</p></Link>
+                                            <Link to='/services/mobile-app-consulting'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Mobile App Consulting</p></Link>
+                                        </div>
                                     </div>
-                                    <div className='flex items-center w-[470px]'>
-                                        <Link to='/services/android-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Android App Development</p></Link>
-                                        <Link to='/services/web-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Web App Development</p></Link>
-                                    </div>
-                                    <div className='flex items-center w-[470px]'>
-                                        <Link to='/services/ui-ux-design'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>UI/UX Design</p></Link>
-                                        <Link to='/services/website-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Website Development</p></Link>
-                                    </div>
-                                    <div className='flex items-center w-[470px]'>
-                                        <Link to='/services/cross-platform-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Cross-Platform App Development</p></Link>
-                                        <Link to='/services/enterprise-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Enterprise App Development</p></Link>
-                                    </div>
-                                    <div className='flex items-center w-[470px]'>
-                                        <Link to='/services/ios-app-design'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>iOS App Design</p></Link>
-                                        <Link to='/services/mvp-for-startups'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>MVP for Startups</p></Link>
-                                    </div>
-                                    <div className='flex items-center w-[470px]'>
-                                        <Link to='/services/mobile-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Mobile App Development</p></Link>
-                                        <Link to='/services/mobile-app-consulting'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>Mobile App Consulting</p></Link>
-                                    </div>
-                                </div>
-                            }
+                                }
+                            </div>
                         </Link>
+
                         <Link to='/portfolio'><p className='style-hover'>Portfolio</p></Link>
-                        <Link onMouseEnter={toggleAboutCheck} to='/about'>
-                            <p className='style-hover relative'>About</p>
-                            {
-                                aboutCheck &&
-                                <div onMouseLeave={toggleAboutCheck2} className='absolute top-20 transition transform duration-500 ease-in-out -translate-y-4 border shadow-class rounded-lg  text-base'>
-                                    <Link to='/about/team'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[220px]'>Our Team</p></Link>
-                                    <Link to='/about/careers'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[220px] '>Careers</p></Link>
-                                </div>
-                            }
+                        <Link to='/about'>
+                            <div className='relative'>
+                                <p onMouseEnter={toggleAboutCheck} onMouseLeave={toggleAboutCheck2} className='style-hover'>About</p>
+                                {
+                                    ((aboutCheck && aboutCheck2) || (aboutCheck && !aboutCheck2) || (!aboutCheck && aboutCheck2)) &&
+                                    <div onMouseEnter={toggleAboutCheck} onMouseLeave={toggleAboutCheck2} className='absolute top-[44px] -left-4 transition transform duration-500 ease-in-out -translate-y-4 border shadow-class rounded-lg bg-white text-base'>
+                                        <Link to='/about/team'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[220px]'>Our Team</p></Link>
+                                        <Link to='/about/careers'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[220px] '>Careers</p></Link>
+                                    </div>
+                                }
+                            </div>
                         </Link>
                         <Link to='/blog'><p className='style-hover '>Blog</p></Link>
                     </div>
