@@ -1,8 +1,5 @@
 import React from 'react';
 import { motion } from "framer-motion";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import { serviceData } from './ServiceData';
 import { Link } from 'react-router-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -28,41 +25,6 @@ const child = {
 }
 
 const HomeServices = () => {
-    // const settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     fade: true,
-    //     speed: 500,
-    //     slidesToShow: 2,
-    //     slidesToScroll: 2,
-    //     initialSlide: 0,
-    //     responsive: [
-    //         {
-    //             breakpoint: 1500,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 2,
-    //                 infinite: true,
-    //                 dots: true
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 600,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //                 initialSlide: 1
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1
-    //             }
-    //         }
-    //     ]
-    // };
 
     return (
         <motion.div variants={container} initial='hidden' animate='visible' className='flex flex-col lg:flex-row lg:justify-between items-center gap-20 lg:gap-0 lg:h-screen mt-10 md:mt-16 lg:-mt-10 w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
@@ -74,7 +36,7 @@ const HomeServices = () => {
             </div>
 
             <motion.div variants={child} className='w-full lg:w-1/2 mx-auto'>
-                <Carousel autoPlay infiniteLoop interval={5000} showThumbs={false} showStatus={false}>
+                <Carousel autoPlay infiniteLoop interval={2000} showThumbs={false} showStatus={false}>
                     {
                         serviceData.map((item) => (
                             <div className="w-[250px] lg:w-[300px] 2xl:w-[400px] mx-auto h-[250px] lg:h-[300px] 2xl:h-[400px]">
@@ -89,36 +51,6 @@ const HomeServices = () => {
                     }
                 </Carousel>
             </motion.div>
-
-            {/* <motion.div variants={child} className="space-y-4" >
-                <div className='flex flex-col items-center justify-center p-3 rounded-lg shadow-lg bg-[#F8F8FF] '>
-                    <img src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/illustration-iphone-dev.svg" alt="" />
-                    <p className='text-sm md:text-lg font-semibold'>iPhone App Development</p>
-                </div>
-                <div className='flex flex-col items-center justify-center p-3 rounded-lg shadow-lg bg-[#F8F8FF]'>
-                    <img src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/illustration-android-dev.svg" alt="" />
-                    <p className='text-sm md:text-lg font-semibold'>Android App Development</p>
-                </div>
-                <div className='flex flex-col items-center justify-center p-3 rounded-lg shadow-lg bg-[#F8F8FF]'>
-                    <img src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/illustration-ios-dev.svg" alt="" />
-                    <p className='text-sm md:text-lg font-semibold'>iOS App Development</p>
-                </div>
-                <div className='flex flex-col items-center justify-center p-3 rounded-lg shadow-lg bg-[#F8F8FF]'>
-                    <img src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/illustration-cross-dev.svg" alt="" />
-                    <p className='text-sm md:text-lg font-semibold'>Cross Platform Development</p>
-                </div>
-                <div className='flex flex-col items-center justify-center p-3 rounded-lg shadow-lg bg-[#F8F8FF]'>
-                    <img src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/illustration-website-dev.svg" alt="" />
-                    <p className='text-sm md:text-lg font-semibold'>Website Development</p>
-                </div>
-                <div className='flex flex-col items-center justify-center p-3 rounded-lg shadow-lg bg-[#F8F8FF]'>
-                    <img src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/illustration-webApp-dev.svg" alt="" />
-                    <p className='text-sm md:text-lg font-semibold'>Web Application Development</p>
-                </div>
-            </motion.div> */}
-
-
-
         </motion.div>
     );
 };

@@ -46,7 +46,7 @@ const Navbar = () => {
                             <p className='style-hover relative'>Services</p>
                             {
                                 serviceCheck &&
-                                <div onMouseLeave={toggleServiceCheck2} className='absolute top-20 transition transform duration-500 ease-in-out -translate-y-4 border shadow-class rounded-lg  text-base '>
+                                <div onMouseLeave={toggleServiceCheck2} className='absolute top-20 transition transform duration-500 ease-in-out -translate-y-4 border shadow-class rounded-lg text-base bg-white'>
                                     <div className='flex items-center w-[470px] '>
                                         <Link to='/services/iphone-app-development'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px] mr-[20px]'>iPhone App Development</p></Link>
                                         <Link to='/services/web-design'><p className='hover:bg-gray-100 h-[52px] flex items-center pl-4 w-[225px]'>Web Design</p></Link>
@@ -114,18 +114,18 @@ const Navbar = () => {
                         </div>
                         <div className={(mobileServices ? 'block' : 'hidden')}>
                             <div className='text-base '>
-                                <Link to='/services/iphone-app-development'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>iPhone App Development</p></Link>
-                                <Link to='/services/android-app-development'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Android App Development</p></Link>
-                                <Link to='/services/ui-ux-design'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>UI/UX Design</p></Link>
-                                <Link to='/services/cross-platform-app-development'><p className='h-12 flex items-center px-3 hover:bg-gray-50'>Cross-Platform App Development</p></Link>
-                                <Link to='/services/ios-app-design'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>iOS App Design</p></Link>
-                                <Link to='/services/mobile-app-development'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Mobile App Development</p></Link>
-                                <Link to='/services/web-design'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Web Design</p></Link>
-                                <Link to='/services/web-app-development'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Web App Development</p></Link>
-                                <Link to='/services/website-development'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Website Development</p></Link>
-                                <Link to='/services/enterprise-app-development'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Enterprise App Development</p></Link>
-                                <Link to='/services/mvp-for-startups'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>MVP for Startups</p></Link>
-                                <Link to='/services/mobile-app-consulting'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Mobile App Consulting</p></Link>
+                                <Link to='/services/iphone-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50 '>iPhone App Development</p></Link>
+                                <Link to='/services/android-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Android App Development</p></Link>
+                                <Link to='/services/ui-ux-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>UI/UX Design</p></Link>
+                                <Link to='/services/cross-platform-app-development'><p className='h-12 flex items-center px-3 bg-white hover:bg-gray-50'>Cross-Platform App Development</p></Link>
+                                <Link to='/services/ios-app-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>iOS App Design</p></Link>
+                                <Link to='/services/mobile-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Mobile App Development</p></Link>
+                                <Link to='/services/web-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Web Design</p></Link>
+                                <Link to='/services/web-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Web App Development</p></Link>
+                                <Link to='/services/website-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Website Development</p></Link>
+                                <Link to='/services/enterprise-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Enterprise App Development</p></Link>
+                                <Link to='/services/mvp-for-startups'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>MVP for Startups</p></Link>
+                                <Link to='/services/mobile-app-consulting'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Mobile App Consulting</p></Link>
                             </div>
                         </div>
                         <div className='flex items-center h-12 hover:bg-gray-100 px-3'>

@@ -9,6 +9,8 @@ import { GoPrimitiveDot } from 'react-icons/go';
 import { TbCircleDot } from 'react-icons/tb';
 import { HashLink } from 'react-router-hash-link';
 import HomeServices from './HomeServices/HomeServices';
+import Clients from './Clients/Clients';
+import GetProposal from './GetProposal/GetProposal';
 
 const Home = () => {
     return (
@@ -32,6 +34,8 @@ const Home = () => {
             <Runon></Runon>
             <Cakemix></Cakemix>
             <HomeServices></HomeServices>
+            <Clients></Clients>
+            <GetProposal></GetProposal>
         </div>
     );
 };
