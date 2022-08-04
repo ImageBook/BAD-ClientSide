@@ -18,10 +18,12 @@ const Home = () => {
         <div>
             <Navbar></Navbar>
             <div className='hidden lg:block'>
-                <div className='flex gap-2 items-center tracking-wider fixed top-28 font-bold right-0 rotate-90 hover:text-[#550b57] hover:cursor-pointer'>
-                    <CgArrowLongDown className='-rotate-90 w-10 h-10'></CgArrowLongDown>
-                    GET PROPOSAL
-                </div>
+                <HashLink to='/#contact' smooth>
+                    <div className='flex gap-2 items-center tracking-wider fixed top-28 font-bold right-0 rotate-90 hover:text-[#550b57] hover:cursor-pointer'>
+                        <CgArrowLongDown className='-rotate-90 w-10 h-10'></CgArrowLongDown>
+                        GET PROPOSAL
+                    </div>
+                </HashLink>
             </div>
             <div className='hidden lg:block'>
                 <div className='fixed bottom-16 left-16   '>

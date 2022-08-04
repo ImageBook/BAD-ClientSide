@@ -2,6 +2,7 @@ import React from 'react';
 import { CgArrowLongDown } from 'react-icons/cg';
 import Navbar from '../Home/Navbar/Navbar';
 import AllServices from './AllServices/AllServices';
+import DevProcess from './DevProcess';
 import Heading from './Heading';
 
 const Services = () => {
@@ -16,6 +17,7 @@ const Services = () => {
             </div>
             <Heading></Heading>
             <AllServices></AllServices>
+            <DevProcess></DevProcess>
         </div>
     );
 };

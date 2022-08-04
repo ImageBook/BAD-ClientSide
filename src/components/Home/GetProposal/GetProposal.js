@@ -7,7 +7,7 @@ const GetProposal = () => {
     }
 
     return (
-        <div initial='hidden' animate='visible' className='flex flex-col lg:flex-row lg:justify-between items-center gap-10 lg:gap-0 lg:h-screen mt-10 md:mt-16 lg:-mt-10 w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
+        <div id='contact' initial='hidden' animate='visible' className='flex flex-col lg:flex-row lg:justify-between items-center gap-10 lg:gap-0 lg:h-screen mt-10 md:mt-16 lg:-mt-10 w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
             <div className='text-center lg:text-left w-full lg:w-1/2 mx-auto'>
                 {/* add your own text */}
                 <p className='text-[56px] md:text-[100px] font-black  text-[#383841] leading-none'>MAKE DREAM</p>

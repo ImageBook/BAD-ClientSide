@@ -4,7 +4,7 @@ import './AllServices.css';
 
 const AllServices = () => {
     return (
-        <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-20'>
+        <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-12 lg:my-28'>
             <div className='flex items-center justify-center flex-wrap gap-10'>
                 <div className=''>
                     <Link to='/services/iphone-app-development' className='flex items-center space-x-2 style rounded-lg border hover:shadow-lg w-[340px] md:w-[400px] h-[125px]'>
