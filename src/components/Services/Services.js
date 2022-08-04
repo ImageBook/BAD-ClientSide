@@ -4,7 +4,10 @@ import Navbar from '../Home/Navbar/Navbar';
 import AllServices from './AllServices/AllServices';
 import DevProcess from './DevProcess';
 import Heading from './Heading';
+import IndustryService from './IndustryService';
+import OurClients from './OurClients';
 import OurWork from './OurWork';
+import WhyBest from './WhyBest';
 
 const Services = () => {
     return (
@@ -20,6 +23,9 @@ const Services = () => {
             <AllServices></AllServices>
             <DevProcess></DevProcess>
             <OurWork></OurWork>
+            <OurClients></OurClients>
+            <WhyBest></WhyBest>
+            <IndustryService></IndustryService>
         </div>
     );
 };

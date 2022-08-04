@@ -38,7 +38,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='sticky top-0'>
+        <div className='sticky top-0 bg-white'>
             <div className='hidden lg:block lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
                 <div className='flex items-end py-7'>
                     <div onClick={goToHome} className='flex space-x-3 items-center mr-14  hover:cursor-pointer'>
@@ -100,64 +100,64 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <div className='lg:hidden w-11/12 md:w-5/6 mx-auto'>
-                <div className='flex justify-between items-center py-3'>
-                    <div onClick={goToHome} className='flex space-x-2 items-center hover:cursor-pointer'>
-                        <GiCrossedBones className='w-5 h-5'></GiCrossedBones>
-                        {/* The name below should be changed! */}
-                        <p className='raleway font-extrabold text-[22px] hover:text-[#951d97]'>textapps</p>
+            <div className='bg-white'>
+                <div className='lg:hidden w-11/12 md:w-5/6 mx-auto'>
+                    <div className='flex justify-between items-center py-3'>
+                        <div onClick={goToHome} className='flex space-x-2 items-center hover:cursor-pointer'>
+                            <GiCrossedBones className='w-5 h-5'></GiCrossedBones>
+                            {/* The name below should be changed! */}
+                            <p className='raleway font-extrabold text-[22px] hover:text-[#951d97]'>textapps</p>
+                        </div>
+                        <div onClick={() => setOpenMenu(!openMenu)} className='font-bold text-sm tracking-widest'>
+                            {/* <GrMenu className='w-6 h-6'></GrMenu> */}
+                            <p>MENU</p>
+                        </div>
+                        <div className='font-bold text-sm tracking-wider'>
+                            <HashLink to='/#contact' smooth>GET PROPOSAL</HashLink>
+                        </div>
                     </div>
-                    <div onClick={() => setOpenMenu(!openMenu)} className='font-bold text-sm tracking-widest'>
-                        {/* <GrMenu className='w-6 h-6'></GrMenu> */}
-                        <p>MENU</p>
-                    </div>
-                    <div className='font-bold text-sm tracking-wider'>
-                        <HashLink to='/#contact' smooth>GET PROPOSAL</HashLink>
-                    </div>
+                    {
+                        openMenu &&
+                        <div className={(openMenu ? "top-[75px]" : "-top-full") + 'fixed text-lg rounded bg-gray-50 transition-top duration-500 ease-linear -translate-y-1'}>
+                            <div onClick={() => setMobileServices(!mobileServices)} className='flex justify-between items-center h-12 hover:bg-gray-100 px-3 '>
+                                <Link to='/services'><p className='hover:text-[#951d97] font-medium'>Services</p></Link>
+                                <IoMdArrowDropdown className='w-6 h-6'></IoMdArrowDropdown>
+                            </div>
+                            <div className={(mobileServices ? 'block' : 'hidden')}>
+                                <div className='text-base '>
+                                    <Link to='/services/iphone-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50 '>iPhone App Development</p></Link>
+                                    <Link to='/services/android-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Android App Development</p></Link>
+                                    <Link to='/services/ui-ux-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>UI/UX Design</p></Link>
+                                    <Link to='/services/cross-platform-app-development'><p className='h-12 flex items-center px-3 bg-white hover:bg-gray-50'>Cross-Platform App Development</p></Link>
+                                    <Link to='/services/ios-app-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>iOS App Design</p></Link>
+                                    <Link to='/services/mobile-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Mobile App Development</p></Link>
+                                    <Link to='/services/web-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Web Design</p></Link>
+                                    <Link to='/services/web-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Web App Development</p></Link>
+                                    <Link to='/services/website-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Website Development</p></Link>
+                                    <Link to='/services/enterprise-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Enterprise App Development</p></Link>
+                                    <Link to='/services/mvp-for-startups'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>MVP for Startups</p></Link>
+                                    <Link to='/services/mobile-app-consulting'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Mobile App Consulting</p></Link>
+                                </div>
+                            </div>
+                            <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
+                                <Link to='/portfolio'><p className='hover:text-[#951d97] font-medium'>Portfolio</p></Link>
+                            </div>
+                            <div onClick={() => setMobileAbout(!mobileAbout)} className='flex justify-between items-center h-12 hover:bg-gray-100 px-3'>
+                                <Link to='/about'><p className='hover:text-[#951d97] font-medium'>About</p></Link>
+                                <IoMdArrowDropdown className='w-6 h-6'></IoMdArrowDropdown>
+                            </div>
+                            <div className={(mobileAbout ? 'block' : 'hidden')}>
+                                <div className='text-base'>
+                                    <Link to='/about/team'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Our Team</p></Link>
+                                    <Link to='/about/careers'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Careers</p></Link>
+                                </div>
+                            </div>
+                            <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
+                                <Link to='/blog'><p className='hover:text-[#951d97] font-medium'>Blog</p></Link>
+                            </div>
+                        </div>
+                    }
                 </div>
-                {
-                    openMenu &&
-                    <div className={(openMenu ? "top-[75px]" : "-top-full") + 'fixed text-lg rounded bg-gray-50 transition-top duration-500 ease-linear -translate-y-1'}>
-                        <div onClick={() => setMobileServices(!mobileServices)} className='flex justify-between items-center h-12 hover:bg-gray-100 px-3 '>
-                            <Link to='/services'><p className='hover:text-[#951d97] font-medium'>Services</p></Link>
-                            <IoMdArrowDropdown className='w-6 h-6'></IoMdArrowDropdown>
-                        </div>
-                        <div className={(mobileServices ? 'block' : 'hidden')}>
-                            <div className='text-base '>
-                                <Link to='/services/iphone-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50 '>iPhone App Development</p></Link>
-                                <Link to='/services/android-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Android App Development</p></Link>
-                                <Link to='/services/ui-ux-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>UI/UX Design</p></Link>
-                                <Link to='/services/cross-platform-app-development'><p className='h-12 flex items-center px-3 bg-white hover:bg-gray-50'>Cross-Platform App Development</p></Link>
-                                <Link to='/services/ios-app-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>iOS App Design</p></Link>
-                                <Link to='/services/mobile-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Mobile App Development</p></Link>
-                                <Link to='/services/web-design'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Web Design</p></Link>
-                                <Link to='/services/web-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Web App Development</p></Link>
-                                <Link to='/services/website-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Website Development</p></Link>
-                                <Link to='/services/enterprise-app-development'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Enterprise App Development</p></Link>
-                                <Link to='/services/mvp-for-startups'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>MVP for Startups</p></Link>
-                                <Link to='/services/mobile-app-consulting'><p className='h-10 flex items-center px-3 bg-white hover:bg-gray-50'>Mobile App Consulting</p></Link>
-                            </div>
-                        </div>
-                        <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
-                            <Link to='/portfolio'><p className='hover:text-[#951d97] font-medium'>Portfolio</p></Link>
-                        </div>
-                        <div onClick={() => setMobileAbout(!mobileAbout)} className='flex justify-between items-center h-12 hover:bg-gray-100 px-3'>
-                            <Link to='/about'><p className='hover:text-[#951d97] font-medium'>About</p></Link>
-                            <IoMdArrowDropdown className='w-6 h-6'></IoMdArrowDropdown>
-                        </div>
-                        <div className={(mobileAbout ? 'block' : 'hidden')}>
-                            <div className='text-base'>
-                                <Link to='/about/team'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Our Team</p></Link>
-                                <Link to='/about/careers'><p className='h-10 flex items-center px-3 hover:bg-gray-50'>Careers</p></Link>
-                            </div>
-                        </div>
-                        <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
-                            <Link to='/blog'><p className='hover:text-[#951d97] font-medium'>Blog</p></Link>
-                        </div>
-                    </div>
-                }
-
-
             </div>
         </div>
     );
