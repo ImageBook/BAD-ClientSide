@@ -4,6 +4,7 @@ import { GiCrossedBones } from 'react-icons/gi';
 import { GrMenu } from 'react-icons/gr';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 
 const Navbar = () => {
@@ -111,7 +112,7 @@ const Navbar = () => {
                         <p>MENU</p>
                     </div>
                     <div className='font-bold text-sm tracking-wider'>
-                        GET PROPOSAL
+                        <HashLink to='/#contact' smooth>GET PROPOSAL</HashLink>
                     </div>
                 </div>
                 {

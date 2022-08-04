@@ -4,6 +4,7 @@ import Navbar from '../Home/Navbar/Navbar';
 import AllServices from './AllServices/AllServices';
 import DevProcess from './DevProcess';
 import Heading from './Heading';
+import OurWork from './OurWork';
 
 const Services = () => {
     return (
@@ -18,6 +19,7 @@ const Services = () => {
             <Heading></Heading>
             <AllServices></AllServices>
             <DevProcess></DevProcess>
+            <OurWork></OurWork>
         </div>
     );
 };
