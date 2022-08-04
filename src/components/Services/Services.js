@@ -2,11 +2,13 @@ import React from 'react';
 import { CgArrowLongDown } from 'react-icons/cg';
 import Navbar from '../Home/Navbar/Navbar';
 import AllServices from './AllServices/AllServices';
+import ClientReview from './ClientReview';
 import DevProcess from './DevProcess';
 import Heading from './Heading';
 import IndustryService from './IndustryService';
 import OurClients from './OurClients';
 import OurWork from './OurWork';
+import ServiceContact from './ServiceContact';
 import WhyBest from './WhyBest';
 
 const Services = () => {
@@ -26,6 +28,8 @@ const Services = () => {
             <OurClients></OurClients>
             <WhyBest></WhyBest>
             <IndustryService></IndustryService>
+            <ClientReview></ClientReview>
+            <ServiceContact></ServiceContact>
         </div>
     );
 };

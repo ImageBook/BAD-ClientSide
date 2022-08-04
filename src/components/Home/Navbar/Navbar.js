@@ -100,7 +100,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <div className='bg-white'>
+            <div className='bg-white sticky top-0'>
                 <div className='lg:hidden w-11/12 md:w-5/6 mx-auto'>
                     <div className='flex justify-between items-center py-3'>
                         <div onClick={goToHome} className='flex space-x-2 items-center hover:cursor-pointer'>
