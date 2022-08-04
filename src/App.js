@@ -1,12 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
+import Services from './components/Services/Services';
 
 function App() {
   return (
     <div className='font max-w-7xl mx-auto'>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/services' element={<Services></Services>}></Route>
       </Routes>
     </div>
   );

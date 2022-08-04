@@ -3,7 +3,7 @@ import './Navbar.css';
 import { GiCrossedBones } from 'react-icons/gi';
 import { GrMenu } from 'react-icons/gr';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -46,7 +46,7 @@ const Navbar = () => {
                         <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>textapps</p>
                     </div>
                     <div className='flex space-x-8 text-[19px] font-normal tracking-wide'>
-                        <Link to='/services'>
+                        <NavLink to='/services'>
                             <div className='relative'>
                                 <p onMouseEnter={toggleServiceCheck} onMouseLeave={toggleServiceCheck2} className='style-hover'>Services</p>
                                 {
@@ -79,10 +79,10 @@ const Navbar = () => {
                                     </div>
                                 }
                             </div>
-                        </Link>
+                        </NavLink>
 
-                        <Link to='/portfolio'><p className='style-hover'>Portfolio</p></Link>
-                        <Link to='/about'>
+                        <NavLink to='/portfolio'><p className='style-hover'>Portfolio</p></NavLink>
+                        <NavLink to='/about'>
                             <div className='relative'>
                                 <p onMouseEnter={toggleAboutCheck} onMouseLeave={toggleAboutCheck2} className='style-hover'>About</p>
                                 {
@@ -93,8 +93,8 @@ const Navbar = () => {
                                     </div>
                                 }
                             </div>
-                        </Link>
-                        <Link to='/blog'><p className='style-hover '>Blog</p></Link>
+                        </NavLink>
+                        <NavLink to='/blog'><p className='style-hover '>Blog</p></NavLink>
                     </div>
 
                 </div>
