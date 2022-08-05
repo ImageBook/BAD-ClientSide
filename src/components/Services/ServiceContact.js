@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {AiOutlineLine} from 'react-icons/ai';
+import BreadcumbService from './BreadcumbService';
+
 
 const ServiceContact = () => {
     const handleContact = event => {
@@ -9,7 +10,7 @@ const ServiceContact = () => {
     }
 
     return (
-        <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-20 lg:my-48'>
+        <div id='contact' className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-20 lg:my-40'>
             <div className='flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0'>
                 <div className='w-full lg:w-1/2'>
                     <p className='text-center lg:text-left font-black text-[49px] lg:text-[56px] 2xl:text-[75px] text-[#383841] leading-tight'>Make Your</p>
@@ -28,11 +29,7 @@ const ServiceContact = () => {
                     </form>
                 </div>
             </div>
-            <div className='mt-20 lg:mt-32 flex items-center space-x-2'>
-                <Link to='/'><p className='text-[15px] text-[#383841] tracking-wider font-medium'>Home</p></Link>
-                <AiOutlineLine className='rotate-90 text-gray-600 w-5 h-5'></AiOutlineLine>
-                <p className='font-bold text-[15px] text-[#383841] tracking-wider'>Services</p>
-            </div>
+            
         </div>
     );
 };
