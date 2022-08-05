@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
 import Home from './components/Home/Home';
+import OurTeam from './components/OurTeam/OurTeam';
 import Services from './components/Services/Services';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/about/team' element={<OurTeam></OurTeam>}></Route>
       </Routes>
     </div>
   );
