@@ -1,0 +1,10 @@
+.hr {
+    background-color: #ac9f9f;
+    color: #ac9f9f;
+    -webkit-transform: rotate(90deg);
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    left: 130px;
+    border: 2px;
+}

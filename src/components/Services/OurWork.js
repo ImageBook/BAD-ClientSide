@@ -10,7 +10,7 @@ const OurWork = () => {
                     <p className='text-lg lg:text-xl text-[#383841] mb-4 2xl:-mt-2 text-center 2xl:text-left'>We create award winning apps!</p>
                     <div className='flex justify-center 2xl:justify-start'>
                         <Link to='/portfolio'>
-                            <button className='w-44 rounded-lg py-2 text-black text-[17px] bg-gradient-to-r from-stone-400 to-gray-100 hover:from-gray-100 hover:to-stone-400 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>View Portfolio</button>
+                            <button className='w-44 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-purple-500 hover:to-indigo-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>View Portfolio</button>
                         </Link>
                     </div>
                 </div>

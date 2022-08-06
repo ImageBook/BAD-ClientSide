@@ -21,8 +21,8 @@ const Vacancy = () => {
                 <img className='w-[300px] h-[300px]' src="https://messapps.com/wp-content/uploads/2022/03/nice-work.png" alt="" />
             </div>
             <div className='flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-12 pt-10 lg:ml-20 pb-2'>
-                <p onClick={toggleCheck} className={((check && !check1) ? "font-bold" : "font-normal") + "text-[#383841] text-[22px] hover:cursor-pointer"}>Backend Node JS Developer</p>
-                <p onClick={toggleCheck1} className={((!check && check1) ? "font-bold" : "font-normal") + "text-[#383841] text-[22px] hover:cursor-pointer"}>iOS Developer</p>
+                <p onClick={toggleCheck} className={(check ? "font-bold" : "font-normal") + "text-[#383841] text-[22px] hover:cursor-pointer"}>Backend Node JS Developer</p>
+                <p onClick={toggleCheck1} className={(check1 ? "font-bold" : "font-normal") + "text-[#383841] text-[22px] hover:cursor-pointer"}>iOS Developer</p>
             </div>
             <hr className='lg:mx-10' />
             {
@@ -53,7 +53,7 @@ const Vacancy = () => {
                             <p>* Versioning knowledge and experience (GitHub/GitLab/BitBucket)</p>
                             <p>* Understanding accessibility and security compliance</p>
                             <p>* Understanding fundamental design principles behind a scalable application</p>
-                            <p>* Creating/Normalization/Maintenance database schemas that represent and support business processes</p>
+                            <p>* Creating / Normalization / Maintenance database schemas that represent and support business processes</p>
                         </div>
                     </div>
                 </div>
