@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Blogs = () => {
+const LatestDevelopment = () => {
     return (
         <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-20 px-2 lg:px-10'>
+            <p className='text-[#383841] text-2xl lg:text-3xl mb-8 lg:pl-6'>Latest in <span className='font-bold'>#development</span></p>
             <div className='flex flex-col lg:flex-row items-center flex-wrap gap-6 xl:gap-x-10 xl:gap-y-12'>
                 <div className='flex flex-col lg:flex-row items-center lg:w-5/12 mx-auto gap-4'>
                     <div className='lg:w-1/2 mx-auto'>
@@ -22,7 +23,7 @@ const Blogs = () => {
                     <div className='text-[#383841] space-y-2 lg:w-1/2 mx-auto'>
                         <p className='font-semibold text-xl lg:hidden xl:block'>KMM as a New Approach</p>
                         <p className='font-semibold text-xl hidden lg:block xl:hidden'>KMM as a New Approach</p>
-                        <p className='lg:hidden xl:block'>What is KMM? KMM stands for Kotlin Multi-platform Mobile and it's a new way to develop mobile apps...</p>
+                        <p className='lg:hidden xl:block'>What is KMM? KMM stands for Kotlin Multi-platform Mobile and it's a new way to develop mobile apps ...</p>
                         <p className='hidden lg:block xl:hidden'>What is KMM? KMM stands for Kotlin Multi-platform Mobile ...</p>
                         <p className='text-sm font-semibold text-gray-400 hover:text-purple-400'>#allcategories #development #strategy</p>
                     </div>
@@ -41,44 +42,19 @@ const Blogs = () => {
                 </div>
                 <div className='flex flex-col lg:flex-row items-center lg:w-5/12 mx-auto gap-4'>
                     <div className='lg:w-1/2 mx-auto'>
-                        <img className='rounded-lg lg:w-[600px] lg:h-[200px] object-cover' src="https://messapps.com/wp-content/uploads/2020/08/App-Ad-Networks-and-Platforms-1200x423.jpg" alt="" />
+                        <img className='rounded-lg lg:w-[600px] lg:h-[200px] object-cover' src="https://messapps.com/wp-content/uploads/2021/11/Why-Apps-get-rejected-1200x423.jpg" alt="" />
                     </div>
                     <div className='text-[#383841] space-y-2 lg:w-1/2 mx-auto'>
-                        <p className='font-semibold text-xl lg:hidden xl:block'>Top 15 Mobile App Ad Networks and Platforms</p>
-                        <p className='font-semibold text-xl hidden lg:block xl:hidden'>Top 15 Mobile App Ad</p>
-                        <p className='lg:hidden xl:block'>There are so many ways to monetize mobile apps, but perhaps the most simple and popular is in-app ads ...</p>
-                        <p className='hidden lg:block xl:hidden'>There are so many ways to monetize mobile apps ...</p>
-                        <p className='text-sm font-semibold text-gray-400 hover:text-purple-400'>#allcategories #marketing</p>
+                        <p className='font-semibold text-xl lg:hidden xl:block'>Why Apps Get Rejected</p>
+                        <p className='font-semibold text-xl hidden lg:block xl:hidden'>Why Apps Get Rejected</p>
+                        <p className='lg:hidden xl:block'>The App Store is every iOS developer’s best friend until your app is rejected, and then it quickly becomes your enemy ...</p>
+                        <p className='hidden lg:block xl:hidden'>Each platform has its own personality. It's ...</p>
+                        <p className='text-sm font-semibold text-gray-400 hover:text-purple-400'>#development #strategy</p>
                     </div>
                 </div>
-                <div className='flex flex-col lg:flex-row items-center lg:w-5/12 mx-auto gap-4'>
-                    <div className='lg:w-1/2 mx-auto'>
-                        <img className='rounded-lg lg:w-[600px] lg:h-[200px] object-cover' src="https://messapps.com/wp-content/uploads/2022/02/Y-our-client-1200x400.png" alt="" />
-                    </div>
-                    <div className='text-[#383841] space-y-2 lg:w-1/2 mx-auto'>
-                        <p className='font-semibold text-xl'>Our client got accepted to Y Combinator!</p>
-                        <p className='lg:hidden xl:block'>We are happy to share some really great news. Our client Aeon just got accepted to Y Combinator! Y Combinator ...</p>
-                        <p className='hidden lg:block xl:hidden'>We are happy to share some really great news ...</p>
-                        <p className='text-sm font-semibold text-gray-400 hover:text-purple-400'>#allcategories</p>
-                    </div>
-                </div>
-                <div className='flex flex-col lg:flex-row items-center lg:w-5/12 mx-auto gap-4'>
-                    <div className='lg:w-1/2 mx-auto'>
-                        <img className='rounded-lg lg:w-[600px] lg:h-[200px] object-cover' src="https://messapps.com/wp-content/uploads/2022/01/Business-Intelligence-1200x423.png" alt="" />
-                    </div>
-                    <div className='text-[#383841] space-y-2 lg:w-1/2 mx-auto'>
-                        <p className='font-semibold text-xl'>Business Intelligence in Mobile App Development</p>
-                        <p className='lg:hidden xl:block'>Business intelligence is an integrated software platform that is used for business data analysis and management ...</p>
-                        <p className='hidden lg:block xl:hidden'>Business intelligence is an integrated software ...</p>
-                        <p className='text-sm font-semibold text-gray-400 hover:text-purple-400'>#allcategories</p>
-                    </div>
-                </div>
-            </div>
-            <div className='flex items-center justify-center mt-10 lg:mt-16'>
-                <button className='w-40 py-2 border bg-gray-50 rounded-lg font-semibold hover:bg-gray-100'>Show All</button>
             </div>
         </div>
     );
 };
 
-export default Blogs;
+export default LatestDevelopment;
