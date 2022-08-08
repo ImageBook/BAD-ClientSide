@@ -12,6 +12,7 @@ import HomeServices from './HomeServices/HomeServices';
 import Clients from './Clients/Clients';
 import GetProposal from './GetProposal/GetProposal';
 import Footer from './Footer/Footer';
+import ServiceFooter from '../Services/ServiceFooter';
 
 const Home = () => {
     return (
@@ -25,11 +26,13 @@ const Home = () => {
                     </div>
                 </HashLink>
             </div>
-            <div className='hidden lg:block'>
-                <div className='fixed bottom-16 left-16   '>
-                    <HashLink to='/#ground-central' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
-                    <HashLink to='/#runon' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
-                    <HashLink to='/#cakemix' smooth><GoPrimitiveDot className='w-[14px] h-[14px] text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+            <div className='bg-white'>
+                <div className='hidden lg:block'>
+                    <div className='fixed bottom-16 left-16'>
+                        <HashLink to='/#ground-central' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                        <HashLink to='/#runon' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                        <HashLink to='/#cakemix' smooth><GoPrimitiveDot className='w-[14px] h-[14px] text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                    </div>
                 </div>
             </div>
             <Hero></Hero>
@@ -39,7 +42,8 @@ const Home = () => {
             <HomeServices></HomeServices>
             <Clients></Clients>
             <GetProposal></GetProposal>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
+            <ServiceFooter></ServiceFooter>
         </div>
     );
 };

@@ -9,6 +9,9 @@ import EnterpriseDevelopment from './components/EnterpriseDevelopment/Enterprise
 import Home from './components/Home/Home';
 import IOSAppService from './components/IOSAppServices/IOSAppService';
 import IphoneAppDevService from './components/iPhoneAppDevService/IphoneAppDevService';
+import MobileAppConsulting from './components/MobileAppConsulting/MobileAppConsulting';
+import MobileAppService from './components/MobileAppService/MobileAppService';
+import MvpStartupService from './components/MvpStartupService/MvpStartupService';
 import OurTeam from './components/OurTeam/OurTeam';
 import Services from './components/Services/Services';
 import UIUXService from './components/UIUXService/UIUXService';
@@ -35,6 +38,9 @@ function App() {
         <Route path='/services/cross-platform-app-development' element={<CrossPlatformServices></CrossPlatformServices>}></Route>
         <Route path='/services/enterprise-app-development' element={<EnterpriseDevelopment></EnterpriseDevelopment>}></Route>
         <Route path='/services/ios-app-design' element={<IOSAppService></IOSAppService>}></Route>
+        <Route path='/services/mvp-for-startups' element={<MvpStartupService></MvpStartupService>}></Route>
+        <Route path='/services/mobile-app-development' element={<MobileAppService></MobileAppService>}></Route>
+        <Route path='/services/mobile-app-consulting' element={<MobileAppConsulting></MobileAppConsulting>}></Route>
       </Routes>
     </div>
   );
