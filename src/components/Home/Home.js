@@ -43,7 +43,9 @@ const Home = () => {
             <Clients></Clients>
             <GetProposal></GetProposal>
             {/* <Footer></Footer> */}
-            <ServiceFooter></ServiceFooter>
+            <div className='mt-28'>
+                <ServiceFooter></ServiceFooter>
+            </div>
         </div>
     );
 };

@@ -1,11 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import blogImg from '../../images/blog image.png';
 import './FutureBlogs.css';
 
 const FeaturedBlog = () => {
+    const navigate = useNavigate();
+    const goToBlog = () => {
+        navigate('/allcategories/strategy/how-much-app-worth/');
+    }
     return (
         <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-20 px-2 lg:px-10'>
-            <div className='relative'>
+            <div onClick={goToBlog} className='relative hover:cursor-pointer'>
                 <img className='h-[511px] object-cover rounded-xl' src={blogImg} alt="" />
                 <div className='absolute top-6 md:top-10 left-4 md:left-10 w-1/2'>
                     <p className='text-white font-semibold tracking-wide md:text-lg'>Featured Article</p>
@@ -19,22 +24,22 @@ const FeaturedBlog = () => {
                 </div>
             </div>
             <div className='mt-10 flex flex-col lg:flex-row gap-4 lg:gap-0 flex-wrap items-start justify-evenly lg:justify-between'>
-                <div className='w-full md:w-1/2 lg:w-1/4 text-center text-[#383841]'>
+                <div className='w-full md:w-1/2 lg:w-1/4 text-center mx-auto text-[#383841]'>
                     <p className='text-lg lg:text-[19px] font-semibold '>How to reserve an App Name</p>
                     <p className='text-lg lg:text-[19px] font-semibold '></p>
                     <p className='font-semibold text-gray-400'>#strategy</p>
                 </div>
-                <div className='w-full md:w-1/2 lg:w-1/4 text-center text-[#383841]'>
+                <div className='w-full md:w-1/2 lg:w-1/4 text-center mx-auto text-[#383841]'>
                     <p className='text-lg lg:text-[19px] font-semibold '>How to Analyze User Feedback</p>
                     <p className='text-lg lg:text-[19px] font-semibold '></p>
                     <p className='font-semibold text-gray-400'>#strategy</p>
                 </div>
-                <div className='w-full md:w-1/2 lg:w-1/4 text-center text-[#383841]'>
+                <div className='w-full md:w-1/2 lg:w-1/4 text-center mx-auto text-[#383841]'>
                     <p className='text-lg lg:text-[19px] font-semibold '>How to Solve Problems With Innovative Apps</p>
                     <p className='text-lg lg:text-[19px] font-semibold '></p>
                     <p className='font-semibold text-gray-400'>#strategy</p>
                 </div>
-                <div className='w-full md:w-1/2 lg:w-1/4 text-center text-[#383841]'>
+                <div className='w-full md:w-1/2 lg:w-1/4 text-center mx-auto text-[#383841]'>
                     <p className='text-lg lg:text-[19px] font-semibold '>Top App Development Comopanies</p>
                     <p className='text-lg lg:text-[19px] font-semibold '></p>
                     <p className='font-semibold text-gray-400'>#allcategories</p>

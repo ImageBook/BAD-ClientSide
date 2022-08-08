@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About/About';
 import AndroidAppServices from './components/AndroidAppServices/AndroidAppServices';
 import Blog from './components/Blog/Blog';
+import HowMuchAppWorth from './components/Blog/HowMuchAppWorth';
 import Careers from './components/Careers/Careers';
 import CrossPlatformServices from './components/CrossPlatformServices/CrossPlatformServices';
 import EnterpriseDevelopment from './components/EnterpriseDevelopment/EnterpriseDevelopment';
@@ -29,6 +30,7 @@ function App() {
         <Route path='/about/team' element={<OurTeam></OurTeam>}></Route>
         <Route path='/about/careers' element={<Careers></Careers>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='//allcategories/strategy/how-much-app-worth/' element={<HowMuchAppWorth></HowMuchAppWorth>}></Route>
         <Route path='/services/iphone-app-development' element={<IphoneAppDevService></IphoneAppDevService>}></Route>
         <Route path='/services/web-design' element={<WebDesignService></WebDesignService>}></Route>
         <Route path='/services/android-app-development' element={<AndroidAppServices></AndroidAppServices>}></Route>
