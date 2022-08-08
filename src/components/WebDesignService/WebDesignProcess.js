@@ -3,7 +3,7 @@ import React from 'react';
 const WebDesignProcess = () => {
     return (
         <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-40 text-[#383841]'>
-            <p className='leading-tight lg:leading-none text-[40px] lg:text-[56px] font-medium mb-16 lg:mb-20 text-center'><span className='font-semibold'>Web Design <br className='hidden 2xl:block' /></span> Process In Our Company</p>
+            <p className='leading-tight lg:leading-none text-[40px] lg:text-[56px] font-medium mb-16 lg:mb-20 text-center'><span className='font-semibold'>Web Design and Development <br className='hidden 2xl:block' /></span> Process In Our Company</p>
             <div className='flex items-center justify-center md:justify-around gap-10 md:gap-x-0 md:gap-y-16 flex-wrap '>
                 <div className='flex flex-col items-center space-y-4 hover:font-semibold transition duration-300 ease-in-out hover:-translate-y-1 w-full md:w-1/2 lg:w-1/4 mx-auto'>
                     <img className='w-[90px] h-[90px]' src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/services/icon-business.svg" alt="" />

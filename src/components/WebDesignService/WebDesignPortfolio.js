@@ -8,7 +8,7 @@ const WebDesignPortfolio = () => {
                 <div className='w-full lg:w-1/2'>
                     <p className='leading-tight lg:leading-none text-[40px] lg:text-[56px] font-medium mb-2'>Our <span className='font-semibold'>Web Design</span> Portfolio</p>
                     <p className='text-lg lg:text-xl mb-4 w-full lg:w-11/12'>Want to take a bubbly, playful approach? We've done that. Your clients expect something more solid and serious? Been there as well. Whatever the intended mood is, our web design company translate that through our design. We'll make sure you have a fresh look, while leaving your tried and trued roots in place.</p>
-                    <div className='flex justify-center lg:justify-start'>
+                    <div className='flex justify-start'>
                         <Link to='/portfolio'>
                             <button className='w-44 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-purple-500 hover:to-indigo-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>View Portfolio</button>
                         </Link>

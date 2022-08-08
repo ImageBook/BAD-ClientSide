@@ -7,7 +7,7 @@ const OurWork = () => {
             <div className='flex flex-col 2xl:flex-row items-center gap-16 2xl:gap-0'>
                 <div className='w-full 2xl:w-1/2 mx-auto'>
                     <p className='font-medium text-[49px] lg:text-[56px] text-[#383841] leading-tight text-center 2xl:text-left'>Explore Our <span className='font-semibold'>Work</span></p>
-                    <p className='text-lg lg:text-xl text-[#383841] mb-4 2xl:-mt-2 text-center 2xl:text-left'>We create award winning apps!</p>
+                    <p className='text-lg lg:text-xl text-[#383841] mb-4 text-center 2xl:text-left'>We create award winning apps!</p>
                     <div className='flex justify-center 2xl:justify-start'>
                         <Link to='/portfolio'>
                             <button className='w-44 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-purple-500 hover:to-indigo-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>View Portfolio</button>

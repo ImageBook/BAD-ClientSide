@@ -2,7 +2,7 @@ import React from 'react';
 
 const Heading = () => {
     return (
-        <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-40'>
+        <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:mt-28 lg:mb-52'>
             <div className='flex items-center justify-center mb-6'>
                 <img src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/services/illustration-web-design.svg" alt="" />
             </div>
