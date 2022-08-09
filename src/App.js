@@ -21,6 +21,8 @@ import EnterpriseDevelopment from './components/EnterpriseDevelopment/Enterprise
 import Home from './components/Home/Home';
 import IOSAppService from './components/IOSAppServices/IOSAppService';
 import IphoneAppDevService from './components/iPhoneAppDevService/IphoneAppDevService';
+import Login from './components/Login/Login';
+import SignUp from './components/Login/SignUp';
 import MobileAppConsulting from './components/MobileAppConsulting/MobileAppConsulting';
 import MobileAppService from './components/MobileAppService/MobileAppService';
 import MvpStartupService from './components/MvpStartupService/MvpStartupService';
@@ -40,6 +42,8 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/about/team' element={<OurTeam></OurTeam>}></Route>
         <Route path='/about/careers' element={<Careers></Careers>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/allcategories/strategy/how-much-app-worth/' element={<HowMuchAppWorth></HowMuchAppWorth>}></Route>
         <Route path='/allcategories/development/flutter/' element={<Flutter></Flutter>}></Route>

@@ -5,6 +5,9 @@ import { GrMenu } from 'react-icons/gr';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 
 const Navbar = () => {
@@ -35,6 +38,11 @@ const Navbar = () => {
 
     const goToHome = () => {
         navigate('/');
+    }
+    const [user] = useAuthState(auth);
+    const doSignOut = () => {
+        signOut(auth);
+        navigate('/login');
     }
 
     return (
@@ -96,6 +104,11 @@ const Navbar = () => {
                             </div>
                         </NavLink>
                         <NavLink to='/blog'><p className='style-hover '>Blog</p></NavLink>
+                        {
+                            user ? <div onClick={doSignOut}><NavLink to='/logout'><p className='style-hover '>Logout</p></NavLink></div>
+                                :
+                                <NavLink to='/login'><p className='style-hover '>Login</p></NavLink>
+                        }
                     </div>
 
                 </div>
@@ -154,6 +167,9 @@ const Navbar = () => {
                             </div>
                             <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
                                 <Link to='/blog'><p className='hover:text-[#951d97] font-medium'>Blog</p></Link>
+                            </div>
+                            <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
+                                <Link to='/login'><p className='hover:text-[#951d97] font-medium'>Login</p></Link>
                             </div>
                         </div>
                     }
