@@ -2,8 +2,19 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
 import AndroidAppServices from './components/AndroidAppServices/AndroidAppServices';
+import AdNetworkBlog from './components/Blog/AdNetworkBlog';
+import AnnouncementBlog from './components/Blog/AnnouncementBlog';
 import Blog from './components/Blog/Blog';
+import BusinessBlog from './components/Blog/BusinessBlog';
+import CombinatorBlog from './components/Blog/CombinatorBlog';
+import FirstMobileAppBlog from './components/Blog/FirstMobileAppBlog';
+import Flutter from './components/Blog/Flutter';
 import HowMuchAppWorth from './components/Blog/HowMuchAppWorth';
+import IosDesignBlog from './components/Blog/IosDesignBlog';
+import KnnBlog from './components/Blog/KnnBlog';
+import MockupMistakeBlog from './components/Blog/MockupMistakeBlog';
+import PopularApiBlog from './components/Blog/PopularApiBlog';
+import RejectedAppBlog from './components/Blog/RejectedAppBlog';
 import Careers from './components/Careers/Careers';
 import CrossPlatformServices from './components/CrossPlatformServices/CrossPlatformServices';
 import EnterpriseDevelopment from './components/EnterpriseDevelopment/EnterpriseDevelopment';
@@ -30,7 +41,18 @@ function App() {
         <Route path='/about/team' element={<OurTeam></OurTeam>}></Route>
         <Route path='/about/careers' element={<Careers></Careers>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='//allcategories/strategy/how-much-app-worth/' element={<HowMuchAppWorth></HowMuchAppWorth>}></Route>
+        <Route path='/allcategories/strategy/how-much-app-worth/' element={<HowMuchAppWorth></HowMuchAppWorth>}></Route>
+        <Route path='/allcategories/development/flutter/' element={<Flutter></Flutter>}></Route>
+        <Route path='/allcategories/development/kmm-new-approach-to-cross-platform-app-development/' element={<KnnBlog></KnnBlog>}></Route>
+        <Route path='/allcategories/development/most-popular-apis-for-seo-software/' element={<PopularApiBlog></PopularApiBlog>}></Route>
+        <Route path='/allcategories/marketing/top-15-mobile-app-ad-networks-and-platforms/' element={<AdNetworkBlog></AdNetworkBlog>}></Route>
+        <Route path='/allcategories/our-client-got-accepted-to-y-combinator/' element={<CombinatorBlog></CombinatorBlog>}></Route>
+        <Route path='/allcategories/bi-in-mobile-app-development/' element={<BusinessBlog></BusinessBlog>}></Route>
+        <Route path='/allcategories/design/first-wireframe/' element={<FirstMobileAppBlog></FirstMobileAppBlog>}></Route>
+        <Route path='/allcategories/strategy/making-a-mockup/' element={<MockupMistakeBlog></MockupMistakeBlog>}></Route>
+        <Route path='/allcategories/design/overview-of-ios-design-guidelines/' element={<IosDesignBlog></IosDesignBlog>}></Route>
+        <Route path='/allcategories/strategy/apps-get-rejected/' element={<RejectedAppBlog></RejectedAppBlog>}></Route>
+        <Route path='/allcategories/accept-cryptocurrency/' element={<AnnouncementBlog></AnnouncementBlog>}></Route>
         <Route path='/services/iphone-app-development' element={<IphoneAppDevService></IphoneAppDevService>}></Route>
         <Route path='/services/web-design' element={<WebDesignService></WebDesignService>}></Route>
         <Route path='/services/android-app-development' element={<AndroidAppServices></AndroidAppServices>}></Route>
