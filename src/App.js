@@ -18,6 +18,7 @@ import KnnBlog from './components/Blog/KnnBlog';
 import MockupMistakeBlog from './components/Blog/MockupMistakeBlog';
 import PopularApiBlog from './components/Blog/PopularApiBlog';
 import RejectedAppBlog from './components/Blog/RejectedAppBlog';
+import UpdateBlog from './components/Blog/UpdateBlog';
 import Careers from './components/Careers/Careers';
 import CrossPlatformServices from './components/CrossPlatformServices/CrossPlatformServices';
 import Dashboard from './components/Dashboard/Dashboard';
@@ -51,9 +52,10 @@ function App() {
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/blog/:id' element={<IndividualBlog></IndividualBlog>}></Route>
-        <Route path='/dashboard' element={<RequireAdmin>
+        <Route path='/blog-update/:id' element={<UpdateBlog></UpdateBlog>}></Route>
+        <Route path='/dashboard' element={
           <Dashboard></Dashboard>
-        </RequireAdmin>}></Route>
+        }></Route>
         <Route path='/allcategories/strategy/how-much-app-worth/' element={<HowMuchAppWorth></HowMuchAppWorth>}></Route>
         <Route path='/allcategories/development/flutter/' element={<Flutter></Flutter>}></Route>
         <Route path='/allcategories/development/kmm-new-approach-to-cross-platform-app-development/' element={<KnnBlog></KnnBlog>}></Route>

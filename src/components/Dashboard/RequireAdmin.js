@@ -9,6 +9,7 @@ import useAdmin from './useAdmin';
 const RequireAdmin = ({children}) => {
     const [user, loading] = useAuthState(auth);
     const [admin] = useAdmin(user);
+    console.log('isAdmin', admin);
     const location = useLocation();
 
     if (loading) {

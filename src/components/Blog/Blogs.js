@@ -10,7 +10,7 @@ const Blogs = () => {
         fetch('http://localhost:5000/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
-    }, []);
+    }, [blogs]);
 
     const navigate = useNavigate();
     const goToFlutterBlog = () => {

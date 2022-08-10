@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Navbar from '../Home/Navbar/Navbar';
+import { useForm } from "react-hook-form";
+import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import Navbar from '../Home/Navbar/Navbar';
-import { toast } from 'react-toastify';
-import { useForm } from "react-hook-form";
 
-const Dashboard = () => {
-    const imageStorageKey = '30d0988b728015c640046cca688a5225';
+const UpdateBlog = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-
+    const { id } = useParams();
+    const [blog, setBlog] = useState({});
     const [user] = useAuthState(auth);
+    const imageStorageKey = '30d0988b728015c640046cca688a5225';
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/blogs/${id}`)
+            .then(res => res.json())
+            .then(data => setBlog(data))
+    }, [id]);
+
+    const { title } = blog;
 
     const onSubmit = async data => {
         const image = data.image[0];
@@ -30,22 +40,23 @@ const Dashboard = () => {
                         img: img,
                         email: user?.email
                     }
-                    // post to database 
-                    fetch('http://localhost:5000/blogs', {
-                        method: 'POST',
+                    // console.log('update blog', blog);
+
+                    // update blog on database 
+                    fetch(`http://localhost:5000/blogs/${id}`, {
+                        method: 'PATCH',
                         headers: {
                             'content-type': 'application/json',
                         },
                         body: JSON.stringify(blog)
                     })
                         .then(res => res.json())
-                        .then(inserted => {
-                            if (inserted.insertedId) {
-                                toast.success('Blog added successfully')
+                        .then(data => {
+                            // console.log('data', data)
+                            if (data.modifiedCount > 0) {
+                                console.log('success');
+                                toast.success("The Blog is updated successfully");
                                 reset();
-                            }
-                            else {
-                                toast.error('Failed to add the blog');
                             }
                         })
                 }
@@ -56,7 +67,8 @@ const Dashboard = () => {
         <div>
             <Navbar></Navbar>
             <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-16 text-[#383841] '>
-                <p className='text-2xl md:text-3xl lg:text-5xl font-semibold text-center mb-8'>Create Blog</p>
+                <p className='text-2xl md:text-3xl lg:text-5xl font-semibold text-center mb-4'>Update Blog</p>
+                <p className='text-lg md:text-xl lg:text-2xl font-semibold text-center mb-8 w-full md:w-3/4 lg:w-1/2 mx-auto'>{title}</p>
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center justify-center'>
                     <input
                         type="text"
@@ -99,11 +111,11 @@ const Dashboard = () => {
                     <label className="label">
                         {errors.content?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.content.message}</span>}
                     </label>
-                    <button className='w-72 md:w-96 lg:w-[500px] mx-auto font-medium text-xl tracking-wide rounded-lg text-stone-100 transition-foc duration-500 ease-in-out bg-purple-500 hover:bg-purple-600 p-2 mb-5' type='submit'>Post</button>
+                    <button className='w-72 md:w-96 lg:w-[500px] mx-auto font-medium text-xl tracking-wide rounded-lg text-stone-100 transition-foc duration-500 ease-in-out bg-purple-500 hover:bg-purple-600 p-2 mb-5' type='submit'>Update</button>
                 </form>
             </div>
         </div>
     );
 };
 
-export default Dashboard;
+export default UpdateBlog;

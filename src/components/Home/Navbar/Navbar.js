@@ -24,7 +24,8 @@ const Navbar = () => {
     // const [admin, setAdmin] = useState(false);
     const navigate = useNavigate();
     const [admin] = useAdmin(user);
-    
+    console.log('isAdmin nav', admin);
+
     const toggleServiceCheck = () => {
         setServiceCheck(true);
         setServiceCheck2(true);

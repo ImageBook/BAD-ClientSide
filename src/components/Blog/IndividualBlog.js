@@ -17,7 +17,8 @@ const IndividualBlog = () => {
             .then(data => setBlog(data))
     }, [id]);
 
-    const { email, title, image, content } = blog;
+    const { email, title, img, content } = blog;
+    console.log('blog image', img);
 
     return (
         <div>
@@ -31,7 +32,7 @@ const IndividualBlog = () => {
                     </div>
                 </div>
                 <div className='flex justify-center mb-8'>
-                    <img className='rounded-lg w-full' src={image} alt="" />
+                    <img className='rounded-lg w-full' src={img} alt="" />
                 </div>
                 <div className='w-full md:w-1/2 mx-auto text-lg lg:text-xl'>
                     <p className='text-lg lg:text-xl'>{content}</p>

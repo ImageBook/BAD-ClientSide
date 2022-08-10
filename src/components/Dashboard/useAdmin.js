@@ -13,11 +13,12 @@ const useAdmin = user => {
             })
                 .then(res => res.json())
                 .then(data => {
+                    console.log('admin data', data);
                     setAdmin(data.admin);
                 })
         }
     }, [user]);
-
+    // console.log('isAdmin adminhook', admin);
     return [admin];
 }
 
