@@ -14,7 +14,7 @@ const UpdateBlog = () => {
     const imageStorageKey = '30d0988b728015c640046cca688a5225';
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blogs/${id}`)
+        fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [id]);
@@ -43,7 +43,7 @@ const UpdateBlog = () => {
                     // console.log('update blog', blog);
 
                     // update blog on database 
-                    fetch(`http://localhost:5000/blogs/${id}`, {
+                    fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`, {
                         method: 'PATCH',
                         headers: {
                             'content-type': 'application/json',

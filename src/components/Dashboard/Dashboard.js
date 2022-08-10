@@ -31,7 +31,7 @@ const Dashboard = () => {
                         email: user?.email
                     }
                     // post to database 
-                    fetch('http://localhost:5000/blogs', {
+                    fetch('https://pure-cove-10523.herokuapp.com/blogs', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

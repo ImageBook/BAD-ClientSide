@@ -16,7 +16,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    
+
     const getEmail = event => {
         setEmail(event.target.value);
     }
@@ -31,7 +31,7 @@ const Login = () => {
         const email = gUser?.user?.email;
         console.log('email', email);
         const currentUser = { email: email };
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(`https://pure-cove-10523.herokuapp.com/user/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const Login = () => {
             })
     }, [gUser?.user?.email]);
 
-    
+
     if (gUser || user) {
         // console.log('gUser', gUser);
         navigate('/');

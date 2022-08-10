@@ -12,7 +12,7 @@ const IndividualBlog = () => {
     const [blog, setBlog] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blogs/${id}`)
+        fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [id]);

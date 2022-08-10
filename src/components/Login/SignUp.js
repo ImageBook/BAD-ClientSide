@@ -23,7 +23,7 @@ const SignUp = () => {
         const email = user?.user?.email;
         console.log('email', email);
         const currentUser = { email: email };
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(`https://pure-cove-10523.herokuapp.com/user/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

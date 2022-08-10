@@ -16,7 +16,7 @@ const BlogCard = ({ blog }) => {
     }
 
     const deleteBlog = id => {
-        fetch(`http://localhost:5000/blogs/${id}`, {
+        fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
