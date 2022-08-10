@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Home/Navbar/Navbar';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -8,6 +8,7 @@ import Spinner from '../Shared/Spinner';
 const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const [confirmPassword, setconfirmPassword] = useState('');
     const [error1, setError1] = useState('');
     const [
@@ -16,7 +17,25 @@ const SignUp = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    useEffect(() => {
+        const email = user?.user?.email;
+        console.log('email', email);
+        const currentUser = { email: email };
+        fetch(`http://localhost:5000/user/${email}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(currentUser)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('login data', data);
+            })
+    }, [user?.user?.email]);
+
     const navigate = useNavigate();
     if (loading || updating) {
         return <>
@@ -24,10 +43,11 @@ const SignUp = () => {
             <Spinner></Spinner>
         </>
     }
-    
     if (user) {
+        // console.log('user', user);
         navigate('/');
     }
+
     // const handleSubmit = async data => {
     //     console.log('user', data);
     //     await createUserWithEmailAndPassword(data.email, data.password);

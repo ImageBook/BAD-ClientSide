@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Home/Navbar/Navbar';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -7,6 +7,8 @@ import auth from '../../firebase.init';
 import Spinner from '../Shared/Spinner';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
@@ -14,12 +16,41 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    
+    const getEmail = event => {
+        setEmail(event.target.value);
+    }
+    const getPassword = event => {
+        setPassword(event.target.value);
+    }
     const navigate = useNavigate();
-    if (gUser) {
+    // const location = useLocation();
+    // let from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        const email = gUser?.user?.email;
+        console.log('email', email);
+        const currentUser = { email: email };
+        fetch(`http://localhost:5000/user/${email}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(currentUser)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('login data', data);
+            })
+    }, [gUser?.user?.email]);
+
+    
+    if (gUser || user) {
+        // console.log('gUser', gUser);
         navigate('/');
     }
-    const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+    // const location = useLocation();
+    // let from = location.state?.from?.pathname || "/";
     if (gLoading || loading) {
         return <>
             <div className='mt-20'>
@@ -31,11 +62,13 @@ const Login = () => {
     if (error || gError) {
         signInError = <p className='text-red-500 font-medium text-center'>{error?.message || gError?.message}</p>
     }
-    const handleSubmit = data => {
-        console.log('user', data);
-        signInWithEmailAndPassword(data.email, data.password);
-        navigate('/');
+    const handleSubmit = async event => {
+        // console.log('user', data);
+        // signInWithEmailAndPassword(data.email, data.password);
+        event.preventDefault();
+        await signInWithEmailAndPassword(email, password);
     };
+
     return (
         <div>
             <Navbar></Navbar>
@@ -49,8 +82,8 @@ const Login = () => {
                             <p className='font-medium text-xl'>Continue With Google</p>
                         </div>
                         <p className='text-lg font-medium mb-5'>OR</p>
-                        <input className='border rounded-lg w-72 md:w-80 lg:w-96 h-14 pl-4 focus:outline-none bg-gray-100 mb-3' type="email" placeholder='Email' required />
-                        <input className='border rounded-lg w-72 md:w-80 lg:w-96 h-14 pl-4 focus:outline-none bg-gray-100 mb-5' type="password" placeholder='Password' required />
+                        <input onBlur={getEmail} className='border rounded-lg w-72 md:w-80 lg:w-96 h-14 pl-4 focus:outline-none bg-gray-100 mb-3' type="email" placeholder='Email' required />
+                        <input onBlur={getPassword} className='border rounded-lg w-72 md:w-80 lg:w-96 h-14 pl-4 focus:outline-none bg-gray-100 mb-5' type="password" placeholder='Password' required />
                         {signInError}
                         <button className='w-72 md:w-80 lg:w-96 mx-auto font-medium text-xl tracking-wide rounded-lg text-stone-100 transition-foc duration-500 ease-in-out bg-purple-500 hover:bg-purple-600 p-2 mb-5' type='submit'>Log In</button>
                         <Link to='/signup'>

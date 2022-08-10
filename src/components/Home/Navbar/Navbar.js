@@ -8,6 +8,8 @@ import { HashLink } from 'react-router-hash-link';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
+import { useEffect } from 'react';
+import useAdmin from '../../Dashboard/useAdmin';
 
 
 const Navbar = () => {
@@ -18,7 +20,11 @@ const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const [mobileServices, setMobileServices] = useState(false);
     const [mobileAbout, setMobileAbout] = useState(false);
+    const [user] = useAuthState(auth);
+    // const [admin, setAdmin] = useState(false);
     const navigate = useNavigate();
+    const [admin] = useAdmin(user);
+    
     const toggleServiceCheck = () => {
         setServiceCheck(true);
         setServiceCheck2(true);
@@ -39,7 +45,6 @@ const Navbar = () => {
     const goToHome = () => {
         navigate('/');
     }
-    const [user] = useAuthState(auth);
     const doSignOut = () => {
         signOut(auth);
         navigate('/login');
@@ -109,6 +114,9 @@ const Navbar = () => {
                                 :
                                 <NavLink to='/login'><p className='style-hover '>Login</p></NavLink>
                         }
+                        {
+                            (user && admin) && <NavLink to='/dashboard'><p className='style-hover '>Dashboard</p></NavLink>
+                        }
                     </div>
 
                 </div>
@@ -168,9 +176,20 @@ const Navbar = () => {
                             <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
                                 <Link to='/blog'><p className='hover:text-[#951d97] font-medium'>Blog</p></Link>
                             </div>
-                            <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
-                                <Link to='/login'><p className='hover:text-[#951d97] font-medium'>Login</p></Link>
-                            </div>
+                            {
+                                user ? <div onClick={doSignOut} className='flex items-center h-12 hover:bg-gray-100 px-3'>
+                                    <Link to='/logout'><p className='hover:text-[#951d97] font-medium'>Logout</p></Link>
+                                </div>
+                                    :
+                                    <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
+                                        <Link to='/login'><p className='hover:text-[#951d97] font-medium'>Login</p></Link>
+                                    </div>
+                            }
+                            {
+                                (user && admin) && <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
+                                    <Link to='/dashboard'><p className='hover:text-[#951d97] font-medium'>Dashboard</p></Link>
+                                </div>
+                            }
                         </div>
                     }
                 </div>

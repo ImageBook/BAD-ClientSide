@@ -1,4 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import About from './components/About/About';
 import AndroidAppServices from './components/AndroidAppServices/AndroidAppServices';
@@ -10,6 +12,7 @@ import CombinatorBlog from './components/Blog/CombinatorBlog';
 import FirstMobileAppBlog from './components/Blog/FirstMobileAppBlog';
 import Flutter from './components/Blog/Flutter';
 import HowMuchAppWorth from './components/Blog/HowMuchAppWorth';
+import IndividualBlog from './components/Blog/IndividualBlog';
 import IosDesignBlog from './components/Blog/IosDesignBlog';
 import KnnBlog from './components/Blog/KnnBlog';
 import MockupMistakeBlog from './components/Blog/MockupMistakeBlog';
@@ -17,6 +20,8 @@ import PopularApiBlog from './components/Blog/PopularApiBlog';
 import RejectedAppBlog from './components/Blog/RejectedAppBlog';
 import Careers from './components/Careers/Careers';
 import CrossPlatformServices from './components/CrossPlatformServices/CrossPlatformServices';
+import Dashboard from './components/Dashboard/Dashboard';
+import RequireAdmin from './components/Dashboard/RequireAdmin';
 import EnterpriseDevelopment from './components/EnterpriseDevelopment/EnterpriseDevelopment';
 import Home from './components/Home/Home';
 import IOSAppService from './components/IOSAppServices/IOSAppService';
@@ -45,6 +50,10 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/blog/:id' element={<IndividualBlog></IndividualBlog>}></Route>
+        <Route path='/dashboard' element={<RequireAdmin>
+          <Dashboard></Dashboard>
+        </RequireAdmin>}></Route>
         <Route path='/allcategories/strategy/how-much-app-worth/' element={<HowMuchAppWorth></HowMuchAppWorth>}></Route>
         <Route path='/allcategories/development/flutter/' element={<Flutter></Flutter>}></Route>
         <Route path='/allcategories/development/kmm-new-approach-to-cross-platform-app-development/' element={<KnnBlog></KnnBlog>}></Route>
@@ -70,6 +79,7 @@ function App() {
         <Route path='/services/mobile-app-development' element={<MobileAppService></MobileAppService>}></Route>
         <Route path='/services/mobile-app-consulting' element={<MobileAppConsulting></MobileAppConsulting>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
