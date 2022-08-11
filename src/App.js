@@ -33,6 +33,7 @@ import MobileAppConsulting from './components/MobileAppConsulting/MobileAppConsu
 import MobileAppService from './components/MobileAppService/MobileAppService';
 import MvpStartupService from './components/MvpStartupService/MvpStartupService';
 import OurTeam from './components/OurTeam/OurTeam';
+import Portfolio from './components/Portfolio/Portfolio';
 import Services from './components/Services/Services';
 import UIUXService from './components/UIUXService/UIUXService';
 import WebAppService from './components/WebAppService/WebAppService';
@@ -45,6 +46,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/about/team' element={<OurTeam></OurTeam>}></Route>
         <Route path='/about/careers' element={<Careers></Careers>}></Route>

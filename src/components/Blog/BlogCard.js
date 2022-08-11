@@ -21,7 +21,7 @@ const BlogCard = ({ blog }) => {
         })
             .then(res => res.json())
             .then(data => {
-                toast.success('This product is deleted!');
+                toast.success('This blog is deleted!');
             })
     }
 
