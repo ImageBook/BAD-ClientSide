@@ -13,22 +13,20 @@ const Runon = () => {
     console.log(scrolled);
 
     return (
-        <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto mt-10 mb-44 lg:mt-40 lg:mb-96 text-[#383841]'>
-            <div className='flex flex-col lg:flex-row items-center justify-center gap-20 md:gap-28 lg:gap-0'>
-                <div className='w-full lg:w-1/2 overflow-hidden'>
+        <div id='1' className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto mt-10 mb-44 lg:mt-40 lg:mb-96 text-[#383841]'>
+            <div className='flex flex-col lg:flex-row items-start justify-center gap-20 md:gap-28 lg:gap-0'>
+                <div className='w-full lg:w-1/2 overflow-hidden lg:sticky lg:top-24'>
                     <div className=''>
                         <p data-aos="fade-down"
                             data-aos-duration="1000"
                             data-aos-offset="200" className='font-black text-[40px] lg:text-[90px] uppercase tracking-wide leading-none mb-2'>Runon</p>
                         <p data-aos="fade-down"
                             data-aos-duration="1000"
-                            data-aos-offset="200" className='text-sm lg:text-xl mb-3 lg:w-1/3'>Wanted to start running but couldn't force yourself?
+                            data-aos-offset="200" className='text-sm lg:text-xl mb-3'>Wanted to start running but couldn't force yourself?
                             Try Runon. The only app that will transfer you into
                             a virtual world of beasts, zombies and galactic stories
                             and make you run for your life.</p>
-                        <div data-aos="fade-down"
-                            data-aos-duration="1000"
-                            data-aos-offset="200" className='w-[170px]'>
+                        <div className='w-[170px]'>
                             <Link to='/runon' className='flex items-center'>
                                 <CgArrowLongDown className='-rotate-90 w-10 h-10 mr-2'></CgArrowLongDown>
                                 <p className='font-bold text-[17px]'>VIEW PROJECT</p>

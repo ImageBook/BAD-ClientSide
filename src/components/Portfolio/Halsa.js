@@ -8,22 +8,20 @@ import runon4 from '../../images/runon4.png';
 
 const Halsa = () => {
     return (
-        <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto mt-10 mb-44 lg:mt-40 lg:mb-96 text-[#383841]'>
-            <div className='flex flex-col lg:flex-row items-center justify-center gap-20 md:gap-28 lg:gap-0'>
-                <div className='w-full lg:w-1/2 overflow-hidden'>
+        <div id='2' className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto mt-10 mb-44 lg:mt-40 lg:mb-96 text-[#383841]'>
+            <div className='flex flex-col lg:flex-row items-start justify-center gap-20 md:gap-28 lg:gap-0'>
+                <div className='w-full lg:w-1/2 overflow-hidden lg:sticky lg:top-24'>
                     <div className=''>
                         <p data-aos="fade-down"
                             data-aos-duration="1000"
-                            data-aos-offset="200" className='font-black text-[40px] lg:text-[90px] uppercase tracking-wide leading-none mb-2'>HALSA.LIFE</p>
+                            data-aos-offset="200" className='font-black text-[40px] lg:text-[90px] uppercase tracking-wide leading-none mb-2'>HALSA LIFE</p>
                         <p data-aos="fade-down"
                             data-aos-duration="1000"
-                            data-aos-offset="200" className='text-sm lg:text-xl mb-3 lg:w-1/3'>Halsa.Life is an opportunity to create
+                            data-aos-offset="200" className='text-sm lg:text-xl mb-3'>Halsa.Life is an opportunity to create
                             an intuitive platform that connects
                             app users to doctors in order
                             to provide direct medical advice.</p>
-                        <div data-aos="fade-down"
-                            data-aos-duration="1000"
-                            data-aos-offset="200" className='w-[170px]'>
+                        <div className='w-[170px]'>
                             <Link to='/halsa-life' className='flex items-center'>
                                 <CgArrowLongDown className='-rotate-90 w-10 h-10 mr-2'></CgArrowLongDown>
                                 <p className='font-bold text-[17px]'>VIEW PROJECT</p>

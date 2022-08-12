@@ -10,8 +10,24 @@ import ArDart from './ArDart';
 import GroundCentral from './GroundCentral';
 import Reefill from './Reefill';
 import Cakemix from './Cakemix';
+import { BsChevronDoubleDown, BsChevronDoubleUp } from 'react-icons/bs';
 
 const Portfolio = () => {
+    // let component = 1;
+    // const handleUp = () => {
+    //     if (component > 1) {
+    //         component--;
+    //         console.log('component', component);
+    //         window.scrollTo()
+    //     }
+    // }
+    // const handleDown = () => {
+    //     if (component < 6) {
+    //         component++;
+    //         console.log('component', component);
+    //     }
+    // }
+
     return (
         <div>
             <Navbar></Navbar>
@@ -23,6 +39,18 @@ const Portfolio = () => {
                     </div>
                 </HashLink>
             </div>
+            {/* <div className='hidden lg:block'>
+                <div className='flex flex-col space-y-2 fixed bottom-10 left-16'>
+                    <div>
+                        <HashLink to='/#`${component}`' smooth>
+                            <BsChevronDoubleUp onClick={handleUp} className='w-8 h-8 bg-[#303035] text-white p-[6px] rounded-full hover:bg-black hover:cursor-pointer'></BsChevronDoubleUp>
+                        </HashLink>
+                    </div>
+                    <div>
+                        <BsChevronDoubleDown onClick={handleDown} className='w-8 h-8 bg-[#303035] text-white p-[6px] rounded-full hover:bg-black hover:cursor-pointer'></BsChevronDoubleDown>
+                    </div>
+                </div>
+            </div> */}
             <Runon></Runon>
             <Halsa></Halsa>
             <ArDart></ArDart>
