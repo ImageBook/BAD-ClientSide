@@ -10,7 +10,7 @@ const DesignAr = () => {
                 </div>
                 <div className='flex space-x-3 items-center justify-center lg:items-start lg:justify-start'>
                     <img className='w-[160px] 2xl:w-[200px] h-[300px] 2xl:h-[375px] -mt-8' src="https://messapps.com/wp-content/themes/twentysixteen/samples/iphone-2.png" alt="" />
-                    <img className='w-[160px] 2xl:w-[200px] h-[300px] 2xl:h-[375px]' src="	https://messapps.com/wp-content/themes/twentysixteen/samples/phone-borderless@2x.png" alt="" />
+                    <img className='w-[160px] 2xl:w-[200px] h-[300px] 2xl:h-[375px]' src="https://messapps.com/wp-content/themes/twentysixteen/samples/phone-borderless@2x.png" alt="" />
                 </div>
             </div>
             <div className='w-full lg:w-1/2'>

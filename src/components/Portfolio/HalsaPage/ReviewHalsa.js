@@ -3,7 +3,7 @@ import React from 'react';
 const ReviewHalsa = () => {
     return (
         <div className='space-y-6 py-4 lg:py-20'>
-            <div className='space-y-6 flex flex-col lg:flex-row items-center lg:gap-x-20'>
+            <div className='space-y-6 lg:space-y-0 flex flex-col lg:flex-row items-center lg:gap-x-20'>
                 <div className='w-full lg:w-5/12 mx-auto flex items-start space-x-5'>
                     <img className='w-[75px]' src="https://messapps.com/wp-content/themes/twentysixteen/samples/chirag3x.png" alt="" />
                     <div>
@@ -19,7 +19,7 @@ const ReviewHalsa = () => {
                     </div>
                 </div>
             </div>
-            <div className='space-y-6 flex flex-col lg:flex-row items-center lg:gap-x-20'>
+            <div className='space-y-6 lg:space-y-0 flex flex-col lg:flex-row items-center lg:gap-x-20'>
                 <div className='w-full lg:w-5/12 mx-auto flex items-start space-x-5'>
                     <img className='w-[75px]' src="https://messapps.com/wp-content/themes/twentysixteen/samples/kishan3x.png" alt="" />
                     <div>
