@@ -15,7 +15,7 @@ const ReviewHalsa = () => {
                     <img className='w-[75px]' src="https://messapps.com/wp-content/themes/twentysixteen/samples/anatoly3x.png" alt="" />
                     <div>
                         <p className='font-bold text-2xl lg:text-3xl'>Anatoly Chernyshev</p>
-                        <p>HThe application is very useful and helpful for everyone. You can meet a doctor using your mobile phone only. Moreover, you can see full data about your illnesses and diseases, it is awesome I think.</p>
+                        <p>The application is very useful and helpful for everyone. You can meet a doctor using your mobile phone only. Moreover, you can see full data about your illnesses and diseases, it is awesome I think.</p>
                     </div>
                 </div>
             </div>

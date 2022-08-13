@@ -33,6 +33,7 @@ import MobileAppConsulting from './components/MobileAppConsulting/MobileAppConsu
 import MobileAppService from './components/MobileAppService/MobileAppService';
 import MvpStartupService from './components/MvpStartupService/MvpStartupService';
 import OurTeam from './components/OurTeam/OurTeam';
+import ArDartPage from './components/Portfolio/ArDartPage/ArDartPage';
 import HalsaPage from './components/Portfolio/HalsaPage/HalsaPage';
 import Portfolio from './components/Portfolio/Portfolio';
 import RunonPage from './components/Portfolio/RunonPage/RunonPage';
@@ -52,6 +53,7 @@ function App() {
           <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
           <Route path='/runon' element={<RunonPage></RunonPage>}></Route>
           <Route path='/halsa-life' element={<HalsaPage></HalsaPage>}></Route>
+          <Route path='/ar-dart' element={<ArDartPage></ArDartPage>}></Route>
           <Route path='/about' element={<About></About>}></Route>
           <Route path='/about/team' element={<OurTeam></OurTeam>}></Route>
           <Route path='/about/careers' element={<Careers></Careers>}></Route>
