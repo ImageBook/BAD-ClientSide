@@ -34,6 +34,7 @@ import MobileAppService from './components/MobileAppService/MobileAppService';
 import MvpStartupService from './components/MvpStartupService/MvpStartupService';
 import OurTeam from './components/OurTeam/OurTeam';
 import ArDartPage from './components/Portfolio/ArDartPage/ArDartPage';
+import CakemixPage from './components/Portfolio/CakemixPage/CakemixPage';
 import GroundCentralPage from './components/Portfolio/GroundCentralPage/GroundCentralPage';
 import HalsaPage from './components/Portfolio/HalsaPage/HalsaPage';
 import Portfolio from './components/Portfolio/Portfolio';
@@ -58,6 +59,7 @@ function App() {
           <Route path='/ar-dart' element={<ArDartPage></ArDartPage>}></Route>
           <Route path='/ground-central' element={<GroundCentralPage></GroundCentralPage>}></Route>
           <Route path='/reefill' element={<ReefillPage></ReefillPage>}></Route>
+          <Route path='/cakemix' element={<CakemixPage></CakemixPage>}></Route>
           <Route path='/about' element={<About></About>}></Route>
           <Route path='/about/team' element={<OurTeam></OurTeam>}></Route>
           <Route path='/about/careers' element={<Careers></Careers>}></Route>
