@@ -35,6 +35,9 @@ const Blogs = () => {
         <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-20 px-2 lg:px-10 text-[#383841]'>
             <p className='text-[#383841] text-2xl lg:text-3xl text-center mb-8 font-semibold'>All Latest Blogs</p>
             <div className='flex flex-col lg:flex-row items-start flex-wrap gap-6 lg:gap-x-0 lg:gap-y-12 2xl:gap-12'>
+                {
+                    [...blogs].reverse().map(blog => <BlogCard key={blog.id} blog={blog}></BlogCard>)
+                }
                 <div onClick={goToFlutterBlog} className='flex flex-col items-start w-full lg:w-[275px] xl:w-[305px] 2xl:w-[350px] mx-auto hover:cursor-pointer'>
                     <img className='rounded-lg lg:w-[600px] lg:h-[200px] object-cover mb-3' src="https://messapps.com/wp-content/uploads/2022/04/Flutter-1200x423.jpg" alt="" />
                     <p className='text-sm font-semibold text-gray-400 hover:text-purple-400 mb-2'>#allcategories #development</p>
@@ -71,9 +74,7 @@ const Blogs = () => {
                     <p className='font-semibold text-xl mb-2'>Business Intelligence in Mobile App Development</p>
                     <p>Business intelligence is an integrated software platform that is used for business data analysis and management ...</p>
                 </div>
-                {
-                    blogs.map(blog => <BlogCard key={blog.id} blog={blog}></BlogCard>)
-                }
+
             </div>
             {/* <div className='flex items-center justify-center mt-10 lg:mt-16'>
                 <button className='w-40 py-2 border bg-gray-50 rounded-lg font-semibold hover:bg-gray-100'>Show All</button>

@@ -110,14 +110,14 @@ const Navbar = () => {
                             </div>
                         </NavLink>
                         <NavLink to='/blog'><p className='style-hover '>Blog</p></NavLink>
-                        {
+                        {/* {
                             user ? <div onClick={doSignOut}><NavLink to='/logout'><p className='style-hover '>Logout</p></NavLink></div>
                                 :
                                 <NavLink to='/login'><p className='style-hover '>Login</p></NavLink>
                         }
                         {
                             (user && admin) && <NavLink to='/dashboard'><p className='style-hover '>Dashboard</p></NavLink>
-                        }
+                        } */}
                     </div>
 
                 </div>
@@ -177,7 +177,7 @@ const Navbar = () => {
                             <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
                                 <Link to='/blog'><p className='hover:text-[#951d97] font-medium'>Blog</p></Link>
                             </div>
-                            {
+                            {/* {
                                 user ? <div onClick={doSignOut} className='flex items-center h-12 hover:bg-gray-100 px-3'>
                                     <Link to='/logout'><p className='hover:text-[#951d97] font-medium'>Logout</p></Link>
                                 </div>
@@ -190,7 +190,7 @@ const Navbar = () => {
                                 (user && admin) && <div className='flex items-center h-12 hover:bg-gray-100 px-3'>
                                     <Link to='/dashboard'><p className='hover:text-[#951d97] font-medium'>Dashboard</p></Link>
                                 </div>
-                            }
+                            } */}
                         </div>
                     }
                 </div>

@@ -7,7 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const UpdateBlog = () => {
-    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset, setValue } = useForm();
     const { id } = useParams();
     const [blog, setBlog] = useState({});
     const [user] = useAuthState(auth);
@@ -19,7 +19,7 @@ const UpdateBlog = () => {
             .then(data => setBlog(data))
     }, [id]);
 
-    const { title } = blog;
+    const { title, content } = blog;
 
     const onSubmit = async data => {
         const image = data.image[0];
@@ -70,17 +70,20 @@ const UpdateBlog = () => {
                 <p className='text-2xl md:text-3xl lg:text-5xl font-semibold text-center mb-4'>Update Blog</p>
                 <p className='text-lg md:text-xl lg:text-2xl font-semibold text-center mb-8 w-full md:w-3/4 lg:w-1/2 mx-auto'>{title}</p>
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center justify-center'>
-                    <input
-                        type="text"
-                        placeholder="Blog Title"
-                        className="border rounded-lg w-72 md:w-96 lg:w-[500px] h-16 px-4 focus:outline-none bg-gray-100 mb-4"
-                        {...register("title", {
-                            required: {
-                                value: true,
-                                message: 'Blog Title is Required'
-                            }
-                        })}
-                    />
+                    <div className='flex flex-col space-y-2 items-start mb-5'>
+                        <input
+                            type="text"
+                            placeholder={title}
+                            className="border rounded-lg w-72 md:w-96 lg:w-[500px] h-16 px-4 focus:outline-none bg-gray-100"
+                            {...register("title", {
+                                required: {
+                                    value: true,
+                                    message: 'Blog Title is Required'
+                                }
+                            })}
+                        />
+                        <button type='button' onClick={() => setValue('title', title)} className="bg-black w-28 h-10 text-gray-100 rounded-lg">Edit Title</button>
+                    </div>
                     <label className="label">
                         {errors.title?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.title.message}</span>}
                     </label>
@@ -97,17 +100,20 @@ const UpdateBlog = () => {
                     <label className="label">
                         {errors.image?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.image.message}</span>}
                     </label>
-                    <textarea
-                        type="text"
-                        placeholder="Content"
-                        className="border rounded-lg w-72 md:w-96 lg:w-[500px] h-44 px-4 pt-2 focus:outline-none bg-gray-100 mb-4 mt-1"
-                        {...register("content", {
-                            required: {
-                                value: true,
-                                message: 'Content is Required'
-                            }
-                        })}
-                    />
+                    <div className='flex flex-col space-y-2 items-start mb-4'>
+                        <textarea
+                            type="text"
+                            placeholder={content}
+                            className="border rounded-lg w-72 md:w-96 lg:w-[500px] h-44 px-4 pt-2 focus:outline-none bg-gray-100 mt-1"
+                            {...register("content", {
+                                required: {
+                                    value: true,
+                                    message: 'Content is Required'
+                                }
+                            })}
+                        />
+                        <button type='button' onClick={() => setValue('content', content)} className=" bg-black w-28 h-10 text-gray-100 rounded-lg">Edit Content</button>
+                    </div>
                     <label className="label">
                         {errors.content?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.content.message}</span>}
                     </label>
