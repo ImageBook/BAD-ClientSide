@@ -14,7 +14,7 @@ const DevProcess = () => {
                     <button className='w-40 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Let's Talk</button>
                 </HashLink>
             </div>
-        </div >
+        </div>
     );
 };
 

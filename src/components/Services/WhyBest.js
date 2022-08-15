@@ -25,7 +25,7 @@ const WhyBest = () => {
                 </div>
             </div>
             <div className='flex items-center justify-center mt-8'>
-                <HashLink to='/#contact'>
+                <HashLink to='/#contact' smooth>
                     <button className='w-44 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Contact Us</button>
                 </HashLink>
             </div>

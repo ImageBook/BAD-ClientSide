@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const WhyChooseTextapps = () => {
     return (
@@ -7,7 +8,9 @@ const WhyChooseTextapps = () => {
                 <div className='w-full lg:w-1/2'>
                     <p className='leading-none text-[40px] lg:text-[56px] font-medium mb-2'>Why choose <br className='hidden lg:block' /> <span className='font-bold'>Textapps</span> for iPhone App Development Services?</p>
                     <p className='text-lg lg:text-xl mb-3'>Textapps is one of the few iPhone app development companies that work with you through the full application lifecycle. From business consulting, mobile app design, and custom app development, to marketing and promotion — we got you covered.</p>
-                    <button className='w-40 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Contact Us</button>
+                    <HashLink to='/#contact' smooth>
+                        <button className='w-40 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Contact Us</button>
+                    </HashLink>
                 </div>
                 <div className='w-full lg:w-1/2 mx-auto'>
                     <div className='flex flex-col md:flex-row items-center justify-center flex-wrap gap-6 md:gap-10'>

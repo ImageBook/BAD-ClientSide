@@ -11,7 +11,7 @@ const ServiceFooter = () => {
     }
     return (
         <div className='bg-white'>
-            <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto py-6 -mt-12'>
+            <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto py-6 '>
                 <div className='flex flex-col lg:flex-row items-start justify-between gap-4 lg:gap-0'>
                     <div className='flex flex-col items-start justify-start lg:w-1/6 lg:space-y-3'>
                         <div onClick={goToHome} className='flex space-x-3 items-center justify-center hover:cursor-pointer lg:-mt-1'>
@@ -26,36 +26,36 @@ const ServiceFooter = () => {
                     <div className='flex flex-col items-start justify-start lg:w-1/6 lg:space-y-3'>
                         <p className='text-xl font-bold'>Company</p>
                         <div className='flex flex-col items-start space-y-[2px]'>
-                            <p>Blog</p>
-                            <p>About</p>
-                            <p>Services</p>
-                            <p>Projects</p>
+                            <Link to='/blog'><p className='hover:underline'>Blog</p></Link>
+                            <Link to='/about'><p className='hover:underline'>About</p></Link>
+                            <Link to='/services'><p className='hover:underline'>Services</p></Link>
+                            <Link to='/portfolio'><p className='hover:underline'>Projects</p></Link>
                         </div>
                     </div>
                     <div className='flex flex-col items-start justify-start lg:w-1/6 lg:space-y-3'>
                         <p className='text-xl font-bold'>Community</p>
                         <div className='flex flex-col items-start space-y-[2px]'>
-                            <p>NYU Contest</p>
-                            <p>Industries</p>
+                            <p className='hover:underline'>NYU Contest</p>
+                            <p className='hover:underline'>Industries</p>
                         </div>
                     </div>
                     <div className='flex flex-col items-start justify-start lg:w-1/6 lg:space-y-3'>
                         <p className='text-xl font-bold'>Our Blog</p>
                         <div className='flex flex-col items-start space-y-[2px]'>
-                            <p>#casestudies</p>
-                            <p>#design</p>
-                            <p>#development</p>
-                            <p>#guides</p>
-                            <p>#marketing</p>
-                            <p>#strategy</p>
+                            <p className='hover:underline'>#casestudies</p>
+                            <p className='hover:underline'>#design</p>
+                            <p className='hover:underline'>#development</p>
+                            <p className='hover:underline'>#guides</p>
+                            <p className='hover:underline'>#marketing</p>
+                            <p className='hover:underline'>#strategy</p>
                         </div>
                     </div>
                     <div className='flex flex-col items-start justify-start lg:w-1/6 lg:space-y-3'>
                         <p className='text-xl font-bold'>Contact</p>
                         <div className='flex flex-col items-start space-y-[2px]'>
-                            <p>team@textapps.com</p>
-                            <p>1460 Broadway, New York</p>
-                            <p>(+91)-900XX-XXXXX</p>
+                            <p className='hover:underline'>team@textapps.com</p>
+                            <p className='hover:underline'>1460 Broadway, New York</p>
+                            <p className='hover:underline'>(+91)-900XX-XXXXX</p>
                             <div className='pt-1'>
                                 <div className='flex items-center space-x-3 pt-2 lg:pt-0'>
                                     {/* set your social links */}

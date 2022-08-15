@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const ExperiencedDevs = () => {
     return (
@@ -6,8 +7,10 @@ const ExperiencedDevs = () => {
             <div className='flex flex-col lg:flex-row items-start justify-center gap-6 md:gap-10'>
                 <div className='w-full lg:w-1/2 space-y-4'>
                     <img className='rounded-lg' src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/services/iPhone-design-illustration.png" alt="" />
-                    <p className='text-[32px] lg:text-[44px] font-medium leading-tight lg:leading-none mb-2'><span className='font-semibold'>Experienced</span> iOS App Developers</p>
-                    <button className='w-40 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Contact Us</button>
+                    <p className='text-[32px] lg:text-[44px] font-medium leading-tight lg:leading-none pb-3'><span className='font-semibold'>Experienced</span> iOS App Developers</p>
+                    <HashLink to='/#contact' smooth>
+                        <button className='w-40 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Contact Us</button>
+                    </HashLink>
                 </div>
                 <div className='w-full lg:w-1/2 mx-auto space-y-4 lg:space-y-10'>
                     <p className='text-lg lg:text-[22px]'>Textapps is one of the few iOS app development companies that work with you through the full application lifecycle. From business consulting, mobile app design, and custom app development, to marketing and promotion—we got you covered.

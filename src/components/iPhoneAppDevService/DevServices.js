@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const DevServices = () => {
     return (
@@ -31,9 +32,11 @@ const DevServices = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex items-center justify-center mt-8 lg:mt-6'>
-                <button className='w-72 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Hire iPhone App Developers</button>
-            </div>
+            <HashLink to='/#contact' smooth>
+                <div className='flex items-center justify-center mt-8 lg:mt-6'>
+                    <button className='w-72 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Hire iPhone App Developers</button>
+                </div>
+            </HashLink>
         </div>
     );
 };
