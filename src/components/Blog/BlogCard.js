@@ -4,12 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../Dashboard/useAdmin';
 import { toast } from 'react-toastify';
+import parse from 'html-react-parser';
 
 const BlogCard = ({ blog }) => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
 
     const { _id, title, img, email, content } = blog;
+    // const text = parse(content);
     const navigate = useNavigate();
     const goToBlog = id => {
         navigate(`/blog/${id}`);

@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+// import JoditEditor from "jodit-react";
+// import parse from 'html-react-parser';
+// import { useRef } from 'react';
 
 const UpdateBlog = () => {
     const { register, formState: { errors }, handleSubmit, reset, setValue } = useForm();
@@ -12,6 +15,10 @@ const UpdateBlog = () => {
     const [blog, setBlog] = useState({});
     const [user] = useAuthState(auth);
     const imageStorageKey = '30d0988b728015c640046cca688a5225';
+    // const [text, setText] = useState({});
+    // const editor = useRef(null);
+
+
 
     useEffect(() => {
         fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`)
@@ -19,7 +26,7 @@ const UpdateBlog = () => {
             .then(data => setBlog(data))
     }, [id]);
 
-    const { title, content } = blog;
+    const { title, img, content } = blog;
 
     const onSubmit = async data => {
         const image = data.image[0];
@@ -34,6 +41,8 @@ const UpdateBlog = () => {
             .then(result => {
                 if (result.success) {
                     const img = result.data.url;
+                    // const description = String(text);
+                    // const description = JSON.parse(text);
                     const blog = {
                         title: data.title,
                         content: data.content,
@@ -82,7 +91,7 @@ const UpdateBlog = () => {
                                 }
                             })}
                         />
-                        <button type='button' onClick={() => setValue('title', title)} className="bg-black w-28 h-10 text-gray-100 rounded-lg">Edit Title</button>
+                        <button type='button' onClick={() => setValue('title', title)} className="bg-black w-32 h-10 text-gray-100 rounded-lg">Edit Title</button>
                     </div>
                     <label className="label">
                         {errors.title?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.title.message}</span>}
@@ -112,8 +121,16 @@ const UpdateBlog = () => {
                                 }
                             })}
                         />
-                        <button type='button' onClick={() => setValue('content', content)} className=" bg-black w-28 h-10 text-gray-100 rounded-lg">Edit Content</button>
+                        <button type='button' onClick={() => setValue('content', content)} className=" bg-black w-32 h-10 text-gray-100 rounded-lg">Edit Content</button>
                     </div>
+                    {/* <div className='mb-4'>
+                        <JoditEditor
+                            ref={editor}
+                            value={content}
+                            tabIndex={1}
+                            onChange={newContent => setText(newContent)}
+                        />
+                    </div> */}
                     <label className="label">
                         {errors.content?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.content.message}</span>}
                     </label>
