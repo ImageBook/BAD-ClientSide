@@ -23,6 +23,7 @@ import Careers from './components/Careers/Careers';
 import CrossPlatformServices from './components/CrossPlatformServices/CrossPlatformServices';
 import Dashboard from './components/Dashboard/Dashboard';
 import RequireAdmin from './components/Dashboard/RequireAdmin';
+// import RequireAdmin from './components/Dashboard/RequireAdmin';
 import EnterpriseDevelopment from './components/EnterpriseDevelopment/EnterpriseDevelopment';
 import Home from './components/Home/Home';
 import IOSAppService from './components/IOSAppServices/IOSAppService';
@@ -33,16 +34,16 @@ import MobileAppConsulting from './components/MobileAppConsulting/MobileAppConsu
 import MobileAppService from './components/MobileAppService/MobileAppService';
 import MvpStartupService from './components/MvpStartupService/MvpStartupService';
 import OurTeam from './components/OurTeam/OurTeam';
-import ArDartPage from './components/Portfolio/ArDartPage/ArDartPage';
-import CakemixPage from './components/Portfolio/CakemixPage/CakemixPage';
+// import ArDartPage from './components/Portfolio/ArDartPage/ArDartPage';
+// import CakemixPage from './components/Portfolio/CakemixPage/CakemixPage';
 import ColioPage from './components/Portfolio/ColioPage/ColioPage';
 import DigitalBasePage from './components/Portfolio/DigitalBasePage/DigitalBasePage';
-import GroundCentralPage from './components/Portfolio/GroundCentralPage/GroundCentralPage';
-import HalsaPage from './components/Portfolio/HalsaPage/HalsaPage';
+// import GroundCentralPage from './components/Portfolio/GroundCentralPage/GroundCentralPage';
+// import HalsaPage from './components/Portfolio/HalsaPage/HalsaPage';
 import HirebuddyPage from './components/Portfolio/HirebuddyPage/HirebuddyPage';
 import Portfolio from './components/Portfolio/Portfolio';
-import ReefillPage from './components/Portfolio/ReefillPage/ReefillPage';
-import RunonPage from './components/Portfolio/RunonPage/RunonPage';
+// import ReefillPage from './components/Portfolio/ReefillPage/ReefillPage';
+// import RunonPage from './components/Portfolio/RunonPage/RunonPage';
 import Services from './components/Services/Services';
 import ScrollToTop from './components/Shared/ScrollToTop';
 import UIUXService from './components/UIUXService/UIUXService';
@@ -59,26 +60,28 @@ function App() {
             <Route path='/' element={<Home></Home>}></Route>
             <Route path='/services' element={<Services></Services>}></Route>
             <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
-            <Route path='/runon' element={<RunonPage></RunonPage>}></Route>
+            {/* <Route path='/runon' element={<RunonPage></RunonPage>}></Route> */}
             <Route path='/digital-base' element={<DigitalBasePage></DigitalBasePage>}></Route>
             <Route path='/hirebuddy' element={<HirebuddyPage></HirebuddyPage>}></Route>
             <Route path='/colio' element={<ColioPage></ColioPage>}></Route>
             <Route path='/vpromise' element={<ColioPage></ColioPage>}></Route>
-            <Route path='/halsa-life' element={<HalsaPage></HalsaPage>}></Route>
-            <Route path='/ar-dart' element={<ArDartPage></ArDartPage>}></Route>
-            <Route path='/ground-central' element={<GroundCentralPage></GroundCentralPage>}></Route>
-            <Route path='/reefill' element={<ReefillPage></ReefillPage>}></Route>
-            <Route path='/cakemix' element={<CakemixPage></CakemixPage>}></Route>
+            {/* <Route path='/halsa-life' element={<HalsaPage></HalsaPage>}></Route> */}
+            {/* <Route path='/ar-dart' element={<ArDartPage></ArDartPage>}></Route> */}
+            {/* <Route path='/ground-central' element={<GroundCentralPage></GroundCentralPage>}></Route> */}
+            {/* <Route path='/reefill' element={<ReefillPage></ReefillPage>}></Route> */}
+            {/* <Route path='/cakemix' element={<CakemixPage></CakemixPage>}></Route> */}
             <Route path='/about' element={<About></About>}></Route>
             <Route path='/about/team' element={<OurTeam></OurTeam>}></Route>
             <Route path='/about/careers' element={<Careers></Careers>}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
-            <Route path='/signup' element={<SignUp></SignUp>}></Route>
+            {/* <Route path='/signup' element={<SignUp></SignUp>}></Route> */}
             <Route path='/blog' element={<Blog></Blog>}></Route>
             <Route path='/blog/:id' element={<IndividualBlog></IndividualBlog>}></Route>
             <Route path='/blog-update/:id' element={<UpdateBlog></UpdateBlog>}></Route>
             <Route path='/dashboard' element={
-              <Dashboard></Dashboard>
+              <RequireAdmin>
+                <Dashboard></Dashboard>
+              </RequireAdmin>
             }></Route>
             <Route path='/allcategories/strategy/how-much-app-worth/' element={<HowMuchAppWorth></HowMuchAppWorth>}></Route>
             <Route path='/allcategories/development/flutter/' element={<Flutter></Flutter>}></Route>

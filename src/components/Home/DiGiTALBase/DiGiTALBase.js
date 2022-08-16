@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CgArrowLongDown } from 'react-icons/cg';
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import './DiGiTALBase.css';
 

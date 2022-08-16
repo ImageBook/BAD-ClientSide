@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import phone from '../../../images/iphone_x-removebg-preview 1.png';
-import background from '../../../images/bubble1.png';
+import React from 'react';
+// import phone from '../../../images/iphone_x-removebg-preview 1.png';
+// import background from '../../../images/bubble1.png';
 import './Hero.css';
 import { motion } from "framer-motion";
 

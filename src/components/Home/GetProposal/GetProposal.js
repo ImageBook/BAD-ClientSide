@@ -38,10 +38,6 @@ const GetProposal = () => {
             .catch(err => {
                 console.log('failed', err)
             })
-        // setName('');
-        // setEmail('');
-        // setText('');
-        // setText('');
         event.target.reset();
     }
 

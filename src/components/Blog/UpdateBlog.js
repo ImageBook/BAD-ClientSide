@@ -26,7 +26,7 @@ const UpdateBlog = () => {
             .then(data => setBlog(data))
     }, [id]);
 
-    const { title, img, content } = blog;
+    const { title, content } = blog;
 
     const onSubmit = async data => {
         const image = data.image[0];
@@ -63,7 +63,7 @@ const UpdateBlog = () => {
                         .then(data => {
                             // console.log('data', data)
                             if (data.modifiedCount > 0) {
-                                console.log('success');
+                                // console.log('success');
                                 toast.success("The Blog is updated successfully");
                                 reset();
                             }

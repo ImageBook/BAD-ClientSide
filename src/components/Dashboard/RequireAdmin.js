@@ -6,7 +6,7 @@ import auth from '../../firebase.init';
 import Spinner from '../Shared/Spinner';
 import useAdmin from './useAdmin';
 
-const RequireAdmin = ({children}) => {
+const RequireAdmin = ({ children }) => {
     const [user, loading] = useAuthState(auth);
     const [admin] = useAdmin(user);
     console.log('isAdmin', admin);
@@ -18,7 +18,7 @@ const RequireAdmin = ({children}) => {
             <Spinner></Spinner>
         </>
     }
-    if (!user || !admin) {
+    if (!user) {
         signOut(auth);
         return <Navigate to='/login' state={{ from: location }} replace ></Navigate>
     }

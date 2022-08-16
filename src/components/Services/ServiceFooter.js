@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { GiCrossedBones } from 'react-icons/gi';
+// import { GiCrossedBones } from 'react-icons/gi';
 import { FaFacebookF, FaInstagram, FaBehanceSquare, FaYoutube } from 'react-icons/fa';
 import { BsLinkedin } from 'react-icons/bs';
 
