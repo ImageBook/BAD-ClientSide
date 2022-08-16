@@ -35,8 +35,11 @@ import MvpStartupService from './components/MvpStartupService/MvpStartupService'
 import OurTeam from './components/OurTeam/OurTeam';
 import ArDartPage from './components/Portfolio/ArDartPage/ArDartPage';
 import CakemixPage from './components/Portfolio/CakemixPage/CakemixPage';
+import ColioPage from './components/Portfolio/ColioPage/ColioPage';
+import DigitalBasePage from './components/Portfolio/DigitalBasePage/DigitalBasePage';
 import GroundCentralPage from './components/Portfolio/GroundCentralPage/GroundCentralPage';
 import HalsaPage from './components/Portfolio/HalsaPage/HalsaPage';
+import HirebuddyPage from './components/Portfolio/HirebuddyPage/HirebuddyPage';
 import Portfolio from './components/Portfolio/Portfolio';
 import ReefillPage from './components/Portfolio/ReefillPage/ReefillPage';
 import RunonPage from './components/Portfolio/RunonPage/RunonPage';
@@ -57,6 +60,10 @@ function App() {
             <Route path='/services' element={<Services></Services>}></Route>
             <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
             <Route path='/runon' element={<RunonPage></RunonPage>}></Route>
+            <Route path='/digital-base' element={<DigitalBasePage></DigitalBasePage>}></Route>
+            <Route path='/hirebuddy' element={<HirebuddyPage></HirebuddyPage>}></Route>
+            <Route path='/colio' element={<ColioPage></ColioPage>}></Route>
+            <Route path='/vpromise' element={<ColioPage></ColioPage>}></Route>
             <Route path='/halsa-life' element={<HalsaPage></HalsaPage>}></Route>
             <Route path='/ar-dart' element={<ArDartPage></ArDartPage>}></Route>
             <Route path='/ground-central' element={<GroundCentralPage></GroundCentralPage>}></Route>

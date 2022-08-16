@@ -55,8 +55,8 @@ const Navbar = () => {
         <div className='sticky top-0 bg-white'>
             <div className='hidden lg:block lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
                 <div className='flex items-end py-7'>
-                    <div onClick={goToHome} className='flex space-x-3 items-center mr-14  hover:cursor-pointer'>
-                        <GiCrossedBones className='w-6 h-6'></GiCrossedBones>
+                    <div onClick={goToHome} className='flex  items-center mr-14  hover:cursor-pointer'>
+                        {/* <GiCrossedBones className='w-6 h-6'></GiCrossedBones> */}
                         {/* The name below should be changed! */}
                         <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>BAD</p>
                     </div>
@@ -125,8 +125,8 @@ const Navbar = () => {
             <div className='bg-white sticky top-0'>
                 <div className='lg:hidden w-11/12 md:w-5/6 mx-auto'>
                     <div className='flex justify-between items-center py-3'>
-                        <div onClick={goToHome} className='flex space-x-2 items-center hover:cursor-pointer'>
-                            <GiCrossedBones className='w-5 h-5'></GiCrossedBones>
+                        <div onClick={goToHome} className='flex items-center hover:cursor-pointer'>
+                            {/* <GiCrossedBones className='w-5 h-5'></GiCrossedBones> */}
                             {/* The name below should be changed! */}
                             <p className='raleway font-extrabold text-[22px] hover:text-[#951d97]'>BAD</p>
                         </div>

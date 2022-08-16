@@ -33,7 +33,7 @@ const Hero = () => {
                 <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none md:-mt-5 tracking-wider'>DEV</motion.p>
                 <motion.p variants={child} className='text-[#383841] font-normal text-xl md:text-2xl mt-1 font-medium'>We Are Bad For Your Competitors! <br /> <span className='text-lg font-normal'>Mobile app development, design and
                     consulting <br className='hidden sm:block' /> company for those who
-                    want to be successful</span></motion.p>
+                    want to be successful.</span></motion.p>
             </div>
             {/* add background image in hero.css file */}
             <motion.div variants={child} className='bg' >

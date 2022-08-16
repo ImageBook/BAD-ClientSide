@@ -11,6 +11,10 @@ import GroundCentral from './GroundCentral';
 import Reefill from './Reefill';
 import Cakemix from './Cakemix';
 import { BsChevronDoubleDown, BsChevronDoubleUp } from 'react-icons/bs';
+import DigitalBase from './DigitalBase';
+import Hirebuddy from './Hirebuddy';
+import Colio from './Colio';
+import Vpromise from './Vpromise';
 
 const Portfolio = () => {
     // let component = 1;
@@ -29,7 +33,7 @@ const Portfolio = () => {
     // }
 
     return (
-        <div>
+        <div className=''>
             <Navbar></Navbar>
             <div className='hidden lg:block'>
                 <HashLink to='/#contact' smooth>
@@ -51,12 +55,16 @@ const Portfolio = () => {
                     </div>
                 </div>
             </div> */}
-            <Runon></Runon>
-            <Halsa></Halsa>
-            <ArDart></ArDart>
-            <GroundCentral></GroundCentral>
-            <Reefill></Reefill>
-            <Cakemix></Cakemix>
+            <DigitalBase></DigitalBase>
+            <Hirebuddy></Hirebuddy>
+            <Colio></Colio>
+            <Vpromise></Vpromise>
+            {/* <Runon></Runon> */}
+            {/* <Halsa></Halsa> */}
+            {/* <ArDart></ArDart> */}
+            {/* <GroundCentral></GroundCentral> */}
+            {/* <Reefill></Reefill> */}
+            {/* <Cakemix></Cakemix> */}
             <ServiceContact></ServiceContact>
             <ServiceFooter></ServiceFooter>
         </div>

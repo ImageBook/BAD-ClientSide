@@ -14,8 +14,8 @@ const ServiceFooter = () => {
             <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto py-6 '>
                 <div className='flex flex-col lg:flex-row items-start justify-between gap-4 lg:gap-0'>
                     <div className='flex flex-col items-start justify-start lg:w-1/6 lg:space-y-3'>
-                        <div onClick={goToHome} className='flex space-x-3 items-center justify-center hover:cursor-pointer lg:-mt-1'>
-                            <GiCrossedBones className='w-6 h-6'></GiCrossedBones>
+                        <div onClick={goToHome} className='flex items-center justify-center hover:cursor-pointer lg:-mt-1'>
+                            {/* <GiCrossedBones className='w-6 h-6'></GiCrossedBones> */}
                             {/* The name below should be changed! */}
                             <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>BAD</p>
                         </div>

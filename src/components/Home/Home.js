@@ -13,6 +13,9 @@ import Clients from './Clients/Clients';
 import GetProposal from './GetProposal/GetProposal';
 import Footer from './Footer/Footer';
 import ServiceFooter from '../Services/ServiceFooter';
+import DiGiTALBase from './DiGiTALBase/DiGiTALBase';
+import Hirebuddy from './Hirebuddy/Hirebuddy';
+import Colio from './Colio/Colio';
 
 const Home = () => {
     return (
@@ -36,9 +39,12 @@ const Home = () => {
                 </div>
             </div>
             <Hero></Hero>
-            <GroundCentral></GroundCentral>
-            <Runon></Runon>
-            <Cakemix></Cakemix>
+            {/* <GroundCentral></GroundCentral> */}
+            <DiGiTALBase></DiGiTALBase>
+            <Hirebuddy></Hirebuddy>
+            <Colio></Colio>
+            {/* <Runon></Runon> */}
+            {/* <Cakemix></Cakemix> */}
             <HomeServices></HomeServices>
             <Clients></Clients>
             <GetProposal></GetProposal>
