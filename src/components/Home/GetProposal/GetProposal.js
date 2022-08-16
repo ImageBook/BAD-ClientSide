@@ -12,7 +12,7 @@ const GetProposal = () => {
                 {/* add your own text */}
                 <p className='text-[56px] md:text-[100px] font-black  text-[#383841] leading-none'>MAKE DREAM</p>
                 <p className='text-[56px] md:text-[100px] font-black  text-[#383841] leading-none md:-mt-2'>A REALITY</p>
-                <p className='text-[#383841] font-normal text-[16px] md:text-xl mt-1'>Let's get in touch. Connect with us via: <span className='font-semibold'>(+91)-900XX-XXXXX</span> or email: <span className='font-semibold'>textapps@gmail.com</span>.</p>
+                <p className='text-[#383841] font-normal text-[16px] md:text-xl mt-1'>Let's get in touch. Connect with us via: <span className='font-semibold'>(+1)-773-530-1043</span> or email: <span className='font-semibold'>we@bestappdev.com</span>.</p>
                 <form onSubmit={handleContact} className='flex flex-col items-center lg:items-start justify-center space-y-3 mt-6'>
                     <input className='w-80 lg:w-[400px] 2xl:w-[500px] h-16 border border-gray-500 rounded p-2 focus:outline-none' type="text" name="" id="" placeholder='Your Name *' required />
                     <input className='w-80 lg:w-[400px] 2xl:w-[500px] h-16 border border-gray-500 rounded p-2 focus:outline-none' type="email" name="" id="" placeholder='Your Email *' required />

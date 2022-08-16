@@ -17,10 +17,10 @@ const ServiceFooter = () => {
                         <div onClick={goToHome} className='flex space-x-3 items-center justify-center hover:cursor-pointer lg:-mt-1'>
                             <GiCrossedBones className='w-6 h-6'></GiCrossedBones>
                             {/* The name below should be changed! */}
-                            <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>textapps</p>
+                            <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>BAD</p>
                         </div>
                         <div className='text-[15px]'>
-                            Textapps is a full service app development company that provides app development, design and consulting services for those who want to be successful.
+                            BAD (Best App Dev) is a full service app development company that provides app development, design and consulting services for those who want to be successful.
                         </div>
                     </div>
                     <div className='flex flex-col items-start justify-start lg:w-1/6 lg:space-y-3'>
@@ -53,9 +53,9 @@ const ServiceFooter = () => {
                     <div className='flex flex-col items-start justify-start lg:w-1/6 lg:space-y-3'>
                         <p className='text-xl font-bold'>Contact</p>
                         <div className='flex flex-col items-start space-y-[2px]'>
-                            <p className='hover:underline'>team@textapps.com</p>
-                            <p className='hover:underline'>1460 Broadway, New York</p>
-                            <p className='hover:underline'>(+91)-900XX-XXXXX</p>
+                            <p className='hover:underline'>we@bestappdev.com</p>
+                            <p className='hover:underline'>1440 W. Taylor St #1675, Chicago, Illinois, United States, 60607</p>
+                            <p className='hover:underline'>(+1)-773-530-1043</p>
                             <div className='pt-1'>
                                 <div className='flex items-center space-x-3 pt-2 lg:pt-0'>
                                     {/* set your social links */}
@@ -73,7 +73,7 @@ const ServiceFooter = () => {
             <hr />
             <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto py-6'>
                 <div className='flex justify-between'>
-                    <p className='text-gray-700'>© Textapps</p>
+                    <p className='text-gray-700'>© BAD</p>
                     <p className='font-semibold text-gray-400 hover:text-gray-500'>Privacy Policy</p>
                 </div>
             </div>

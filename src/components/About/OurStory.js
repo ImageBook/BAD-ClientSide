@@ -21,9 +21,9 @@ const OurStory = () => {
                     <img className='w-[300px]' src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/services/illustration-why-love.svg" alt="" />
                 </div>
                 <div className='w-full lg:w-1/2 text-[#383841] text-lg lg:text-xl'>
-                    <p>Textapps - an app development company that focusses on creating successful profitable apps. After the success of the first application, Vasily moved on to building more educational apps for other exams such as SAT, GMAT, MCAT, and others.</p>
+                    <p>BAD (Best App Dev) - an app development company that focusses on creating successful profitable apps. After the success of the first application, Vasily moved on to building more educational apps for other exams such as SAT, GMAT, MCAT, and others.</p>
                     <br />
-                    <p>With time, it becomes apparent that there is more to this industry than just building apps for different tests. More and more people around started asking how they can build an app, what they need to know, how to make it successful. That lead to creating Textapps.</p>
+                    <p>With time, it becomes apparent that there is more to this industry than just building apps for different tests. More and more people around started asking how they can build an app, what they need to know, how to make it successful. That lead to creating BAD (Best App Dev).</p>
                 </div>
             </div>
         </div>

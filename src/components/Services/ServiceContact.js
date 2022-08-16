@@ -15,7 +15,7 @@ const ServiceContact = () => {
                 <div className='w-full lg:w-1/2'>
                     <p className='text-center lg:text-left font-black text-[49px] lg:text-[56px] 2xl:text-[75px] text-[#383841] leading-tight'>Make Your</p>
                     <p className='text-center lg:text-left font-black text-[49px] lg:text-[56px] 2xl:text-[75px] text-[#383841] leading-tight lg:-mt-3'>Dream a Reality</p>
-                    <p className='text-[#383841] text-lg xl:text-xl text-center lg:text-left mt-2'>At Textapps, we don't just develop apps. We build dreams. Let's build yours!</p>
+                    <p className='text-[#383841] text-lg xl:text-xl text-center lg:text-left mt-2'>At BAD (Best App Dev), we don't just develop apps. We build dreams. Let's build yours!</p>
                 </div>
                 <div className='w-full lg:w-1/2 mx-auto'>
                     <form onSubmit={handleContact} className='flex flex-col items-center justify-center space-y-3 mt-6'>
@@ -29,7 +29,7 @@ const ServiceContact = () => {
                     </form>
                 </div>
             </div>
-            
+
         </div>
     );
 };

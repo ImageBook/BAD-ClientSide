@@ -18,12 +18,12 @@ const Footer = () => {
                 <div onClick={goToHome} className='flex space-x-3 items-center justify-center hover:cursor-pointer'>
                     <GiCrossedBones className='w-6 h-6'></GiCrossedBones>
                     {/* The name below should be changed! */}
-                    <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>textapps</p>
+                    <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>BAD (Best App Dev)</p>
                 </div>
                 <div className='flex flex-col lg:flex-row items-center lg:space-x-6 space-y-1 lg:space-y-0 font-medium'>
                     {/* give your contact details */}
-                    <p className='hover:underline'>team@textapps.com</p>
-                    <p className='hover:underline'>textapps@gmail.com</p>
+                    <p className='hover:underline'>team@BAD (Best App Dev).com</p>
+                    <p className='hover:underline'>BAD (Best App Dev)@gmail.com</p>
                     <p className='hover:underline'>(+91)-900XX-XXXXX</p>
                 </div>
                 <div className='flex items-center lg:space-x-3 pt-2 lg:pt-0'>

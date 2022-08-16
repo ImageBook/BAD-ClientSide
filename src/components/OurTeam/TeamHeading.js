@@ -7,7 +7,7 @@ const TeamHeading = () => {
             <div className='flex flex-col lg:flex-row items-center gap-5 lg:gap-0 '>
                 <div className='lg:w-1/2'>
                     <p className='text-[48px] lg:text-[88px] font-black text-[#383841]'>Our Team</p>
-                    <p className='text-[#383841] lg:text-lg mt-3 md:mt-1 lg:mt-3'>Hey! We are the Textapps team, and we are glad to meet you!</p>
+                    <p className='text-[#383841] lg:text-lg mt-3 md:mt-1 lg:mt-3'>Hey! We are the BAD (Best App Dev) team, and we are glad to meet you!</p>
                     <p className='text-[#383841] lg:text-lg mt-3 md:mt-1 lg:mt-3'>We are a team of professionals. Each of us has their own hobbies and interests, but we are all united by our passion for what we do. We are the ones who will meet you and guide you through the entire development process of your future product.</p>
                     <p className='text-[#383841] lg:text-lg mt-3 md:mt-1 lg:mt-3'>Designers will create you a kick-ass design. Developers will build amazing software. QA engineers will make sure that everything works flawlessly. And our awesome project managers will lead you till the launch.</p>
                 </div>

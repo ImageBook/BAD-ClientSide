@@ -7,7 +7,7 @@ const AndroidAppPortfolio = () => {
             <div className='flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-10 2xl:gap-0'>
                 <div className='w-full lg:w-1/2'>
                     <p className='leading-tight lg:leading-none text-[40px] lg:text-[56px] font-medium mb-2'>Our <span className='font-semibold'>Android App</span> Development Portfolio</p>
-                    <p className='text-lg lg:text-xl mb-4 w-full lg:w-11/12'>UI design is as important as high-performance development. The proper design increases conversion and client loyalty. UI/UX designers at Textapps create perfectly balanced, beautiful, and convenient user interfaces for Android applications.</p>
+                    <p className='text-lg lg:text-xl mb-4 w-full lg:w-11/12'>UI design is as important as high-performance development. The proper design increases conversion and client loyalty. UI/UX designers at BAD (Best App Dev) create perfectly balanced, beautiful, and convenient user interfaces for Android applications.</p>
                     <div className='flex justify-center lg:justify-start'>
                         <Link to='/portfolio'>
                             <button className='w-44 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-purple-500 hover:to-indigo-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>View Portfolio</button>

@@ -5,8 +5,8 @@ const WhyChoose10 = () => {
         <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-40 text-[#383841]'>
             <div className='flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-10'>
                 <div className='w-full lg:w-1/2'>
-                    <p className='leading-none text-[40px] lg:text-[56px] font-medium mb-2'>Why <span className='font-bold'>Textapps</span> is the Best?</p>
-                    <p className='text-lg lg:text-xl mb-3'>Here at Textapps, apart from praising good app design when we see it, and shaking our heads when a prominent brand or startup has dumped their resources into a discombobulated mess of an application, we know Apple. Even though our abilities have branched out to Android, cross-platform, and web projects, our roots are deep in iOS.</p>
+                    <p className='leading-none text-[40px] lg:text-[56px] font-medium mb-2'>Why <span className='font-bold'>BAD (Best App Dev)</span> is the Best?</p>
+                    <p className='text-lg lg:text-xl mb-3'>Here at BAD (Best App Dev), apart from praising good app design when we see it, and shaking our heads when a prominent brand or startup has dumped their resources into a discombobulated mess of an application, we know Apple. Even though our abilities have branched out to Android, cross-platform, and web projects, our roots are deep in iOS.</p>
                     <button className='w-40 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Contact Us</button>
                 </div>
                 <div className='w-full lg:w-1/2 mx-auto'>

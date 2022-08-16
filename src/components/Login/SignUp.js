@@ -87,7 +87,7 @@ const SignUp = () => {
             <Navbar></Navbar>
             <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-20 text-[#383841] '>
                 <div className='w-full md:w-3/4 lg:w-1/2 mx-auto p-4 bg-gray-50 shadow rounded'>
-                    <p className='font-semibold text-2xl lg:text-3xl mb-3 tracking-wide text-center pt-3'>Sign Up to TextApps</p>
+                    <p className='font-semibold text-2xl lg:text-3xl mb-3 tracking-wide text-center pt-3'>Sign Up to BAD (Best App Dev)</p>
                     <hr className='w-11/12 md:w-3/4 lg:w-1/2 mx-auto mb-8' />
                     <form onSubmit={handleSubmit} className='flex flex-col items-center justify-center '>
                         <input className='border rounded-lg w-72 md:w-80 lg:w-96 h-14 pl-4 focus:outline-none bg-gray-100 mb-3' type="text" placeholder='Name' required />

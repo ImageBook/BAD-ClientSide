@@ -58,7 +58,7 @@ const Navbar = () => {
                     <div onClick={goToHome} className='flex space-x-3 items-center mr-14  hover:cursor-pointer'>
                         <GiCrossedBones className='w-6 h-6'></GiCrossedBones>
                         {/* The name below should be changed! */}
-                        <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>textapps</p>
+                        <p className='raleway font-extrabold text-2xl hover:text-[#951d97]'>BAD</p>
                     </div>
                     <div className='flex space-x-8 text-[19px] font-normal tracking-wide'>
                         <NavLink to='/services'>
@@ -128,7 +128,7 @@ const Navbar = () => {
                         <div onClick={goToHome} className='flex space-x-2 items-center hover:cursor-pointer'>
                             <GiCrossedBones className='w-5 h-5'></GiCrossedBones>
                             {/* The name below should be changed! */}
-                            <p className='raleway font-extrabold text-[22px] hover:text-[#951d97]'>textapps</p>
+                            <p className='raleway font-extrabold text-[22px] hover:text-[#951d97]'>BAD</p>
                         </div>
                         <div onClick={() => setOpenMenu(!openMenu)} className='font-bold text-sm tracking-widest'>
                             {/* <GrMenu className='w-6 h-6'></GrMenu> */}

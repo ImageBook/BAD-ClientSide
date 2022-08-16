@@ -32,10 +32,10 @@ const AnnouncementBlog = () => {
                     <img className='rounded-lg' src="https://messapps.com/wp-content/uploads/2021/12/cryptocurrency-1200x423.jpg" alt="" />
                 </div>
                 <div className='w-full md:w-1/2 mx-auto text-lg lg:text-xl'>
-                    <p className='mb-4'>Starting October 2021, Textapps accept cryptocurrency for payments!</p>
+                    <p className='mb-4'>Starting October 2021, BAD (Best App Dev) accept cryptocurrency for payments!</p>
                     <p className='mb-4'>There are over 79 million cryptocurrency users worldwide, at the end of 2021, according to Statista.</p>
                     <p className='mb-4'>By January 2020, the number of places that accept cryptocurrency increased to 10 000 (according to Coinmap.org). Europe and the United States have become leaders in cryptocurrency adoption as a means of payment for goods and services. For example, in Italy, paying for online purchases with Bitcoin is more popular today than paying with Visa, Mastercard, and American Express.</p>
-                    <p className='mb-8'>Here at Textapps, we always try to keep up with the times, so we decided to be the first app development company with cryptocurrency payments receiving. To make life easier for our clients, we accept any reliable currency, not only Bitcoins.</p>
+                    <p className='mb-8'>Here at BAD (Best App Dev), we always try to keep up with the times, so we decided to be the first app development company with cryptocurrency payments receiving. To make life easier for our clients, we accept any reliable currency, not only Bitcoins.</p>
                 </div>
                 <ServiceContact></ServiceContact>
                 <ServiceFooter></ServiceFooter>

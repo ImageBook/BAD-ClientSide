@@ -6,7 +6,7 @@ const BuildDream = () => {
         <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-40'>
             <div className='flex flex-col lg:flex-row gap-6 lg:gap-0 items-start justify-center'>
                 <div className='w-full lg:w-1/2 '>
-                    <p className='font-medium text-[32px] lg:text-[40px] text-[#383841] leading-tight mb-4'>Build your <span className='font-semibold'>Dream</span> with <span className='font-semibold'>Textapps</span></p>
+                    <p className='font-medium text-[32px] lg:text-[40px] text-[#383841] leading-tight mb-4'>Build your <span className='font-semibold'>Dream</span> with <span className='font-semibold'>BAD (Best App Dev)</span></p>
                     <HashLink to='/#contact' smooth>
                         <button className='w-44 rounded-lg py-2 text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition-colors duration-1000 ease-in-out font-bold tracking-wide'>Get Proposal</button>
                     </HashLink>

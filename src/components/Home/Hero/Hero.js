@@ -28,10 +28,12 @@ const Hero = () => {
         <motion.div variants={container} initial='hidden' animate='visible' className='flex flex-col lg:flex-row lg:justify-between items-center gap-20 lg:gap-0 lg:h-screen mt-10 md:mt-16 lg:-mt-10 w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
             <div className='text-center lg:text-left'>
                 {/* add your own text */}
-                <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none'>BUILD</motion.p>
-                <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none md:-mt-5'>YOUR</motion.p>
-                <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none md:-mt-5'>DREAM</motion.p>
-                <motion.p variants={child} className='text-[#383841] font-normal text-[16px] md:text-2xl mt-1'>Mobile app development, design and <br /> consulting company for those who <br /> want to be successful</motion.p>
+                <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none tracking-wider'>BEST</motion.p>
+                <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none md:-mt-5 tracking-wider'>APP</motion.p>
+                <motion.p variants={child} className='text-[56px] md:text-[128px] font-black  text-[#383841] leading-none md:-mt-5 tracking-wider'>DEV</motion.p>
+                <motion.p variants={child} className='text-[#383841] font-normal text-xl md:text-2xl mt-1 font-medium'>We Are Bad For Your Competitors! <br /> <span className='text-lg font-normal'>Mobile app development, design and
+                    consulting <br className='hidden sm:block' /> company for those who
+                    want to be successful</span></motion.p>
             </div>
             {/* add background image in hero.css file */}
             <motion.div variants={child} className='bg' >

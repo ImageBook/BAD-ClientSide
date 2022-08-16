@@ -3,7 +3,6 @@ import { HashLink } from 'react-router-hash-link';
 import Navbar from '../Home/Navbar/Navbar';
 import { CgArrowLongDown } from 'react-icons/cg';
 import Heading from './Heading';
-import WhyChooseTextapps from './WhyChooseTextapps';
 import DevProcess from '../Services/DevProcess';
 import DevServices from './DevServices';
 import IPhoneAppPortfolio from './IPhoneAppPortfolio';
@@ -17,6 +16,7 @@ import ServiceContact from '../Services/ServiceContact';
 import { Link } from 'react-router-dom';
 import { AiOutlineLine } from 'react-icons/ai';
 import ServiceFooter from '../Services/ServiceFooter';
+import WhyChooseTextapps from './WhyChooseTextapps';
 
 const IphoneAppDevService = () => {
     return (
@@ -51,7 +51,7 @@ const IphoneAppDevService = () => {
                 </div>
             </div>
             <ServiceFooter></ServiceFooter>
-        </div>
+        </div >
     );
 };
 

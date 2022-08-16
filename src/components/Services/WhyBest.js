@@ -4,8 +4,8 @@ import { HashLink } from 'react-router-hash-link';
 const WhyBest = () => {
     return (
         <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-20 lg:my-40'>
-            <p className='xl:hidden font-medium text-[49px] lg:text-[56px] text-[#383841] text-center mb-6'>Why Textapps is <span className='font-semibold'>the Best?</span></p>
-            <p className='hidden xl:block font-medium text-[49px] lg:text-[56px] text-[#383841] text-center mb-6 leading-tight'>Why Textapps is <br /> <span className='font-semibold'>the Best?</span></p>
+            <p className='xl:hidden font-medium text-[49px] lg:text-[56px] text-[#383841] text-center mb-6'>Why BAD (Best App Dev) is <span className='font-semibold'>the Best?</span></p>
+            <p className='hidden xl:block font-medium text-[49px] lg:text-[56px] text-[#383841] text-center mb-6 leading-tight'>Why BAD (Best App Dev) is <br /> <span className='font-semibold'>the Best?</span></p>
             <div className='flex items-center justify-center flex-wrap gap-10 2xl:gap-6'>
                 <div className='flex flex-col items-center space-y-2 w-[300px] h-[260px] bg-[#FAFAFA] p-2 rounded-lg shadow-lg transition duration-500 ease-in-out hover:-translate-y-1 border'>
                     <img className='w-[295px] h-[155px] ' src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/services/icon-full-service.svg" alt="" />

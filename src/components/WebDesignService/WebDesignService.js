@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import Navbar from '../Home/Navbar/Navbar';
 import { CgArrowLongDown } from 'react-icons/cg';
 import Heading from './Heading';
-import WhyChooseTextapps from '../iPhoneAppDevService/WhyChooseTextapps';
+// import WhyChooseBAD (Best App Dev) from '../iPhoneAppDevService/WhyChooseBAD (Best App Dev)';
 import WhyChoose2 from './WhyChoose2';
 import CustomService from './CustomService';
 import WebDesignPortfolio from './WebDesignPortfolio';
