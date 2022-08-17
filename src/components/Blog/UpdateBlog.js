@@ -5,9 +5,13 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-// import JoditEditor from "jodit-react";
 // import parse from 'html-react-parser';
-// import { useRef } from 'react';
+import JoditEditor from "jodit-react";
+import { useRef } from 'react';
+// import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+// import { CKEditor } from '@ckeditor/ckeditor5-react';
+// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 
 const UpdateBlog = () => {
     const { register, formState: { errors }, handleSubmit, reset, setValue } = useForm();
@@ -15,16 +19,18 @@ const UpdateBlog = () => {
     const [blog, setBlog] = useState({});
     const [user] = useAuthState(auth);
     const imageStorageKey = '30d0988b728015c640046cca688a5225';
-    // const [text, setText] = useState({});
-    // const editor = useRef(null);
-
-
+    const editor = useRef(null);
+    const [text, setText] = useState("");
 
     useEffect(() => {
         fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [id]);
+
+    // const handleChange = (e, editor) => {
+    //     setText((editor.getData()));
+    // }
 
     const { title, content } = blog;
 
@@ -45,7 +51,8 @@ const UpdateBlog = () => {
                     // const description = JSON.parse(text);
                     const blog = {
                         title: data.title,
-                        content: data.content,
+                        // content: data.content,
+                        content: text,
                         img: img,
                         email: user?.email
                     }
@@ -109,7 +116,7 @@ const UpdateBlog = () => {
                     <label className="label">
                         {errors.image?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.image.message}</span>}
                     </label>
-                    <div className='flex flex-col space-y-2 items-start mb-4'>
+                    {/* <div className='flex flex-col space-y-2 items-start mb-4'>
                         <textarea
                             type="text"
                             placeholder={content}
@@ -122,13 +129,20 @@ const UpdateBlog = () => {
                             })}
                         />
                         <button type='button' onClick={() => setValue('content', content)} className=" bg-black w-32 h-10 text-gray-100 rounded-lg">Edit Content</button>
-                    </div>
-                    {/* <div className='mb-4'>
+                    </div> */}
+                    <div className='mb-4'>
                         <JoditEditor
                             ref={editor}
                             value={content}
                             tabIndex={1}
-                            onChange={newContent => setText(newContent)}
+                            onBlur={newContent => setText(newContent)}
+                        />
+                    </div>
+                    {/* <div className='mb-4'>
+                        <CKEditor
+                            editor={ClassicEditor}
+                            
+                            onChange={(e, editor) => { handleChange(e, editor) }}
                         />
                     </div> */}
                     <label className="label">

@@ -27,6 +27,10 @@ const Navbar = () => {
     const [admin] = useAdmin(user);
     console.log('isAdmin nav', admin);
 
+    const goToDashboard = () => {
+        navigate('/dashboard');
+    }
+
     const toggleServiceCheck = () => {
         setServiceCheck(true);
         setServiceCheck2(true);
@@ -200,7 +204,7 @@ const Navbar = () => {
                             }
                              */}
                             {
-                                (user && admin) && <div className='flex items-center h-12 hover:bg-gray-100 px-3 -ml-[2px]'>
+                                (user && admin) && <div onClick={goToDashboard} className='flex items-center h-12 hover:bg-gray-100 px-3 -ml-[2px]'>
                                     <Link to='/dashboard'><p className='text-white hover:text-[#951d97] font-bold bg-purple-500 px-4 py-2 rounded-lg'>Post Blog</p></Link>
                                 </div>
                             }

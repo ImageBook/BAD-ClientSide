@@ -37,7 +37,7 @@ const BlogCard = ({ blog }) => {
                 <img onClick={() => goToBlog(_id)} className='rounded-lg lg:w-[600px] lg:h-[200px] object-cover mb-3' src={img} alt="" />
                 {/* <p className='text-sm font-semibold text-gray-400 hover:text-purple-400 mb-2'>#allcategories</p> */}
                 <p onClick={() => goToBlog(_id)} className='font-semibold text-xl mb-2'>{title}</p>
-                <p onClick={() => goToBlog(_id)} >{content.slice(0, 125)} ...</p>
+                <p onClick={() => goToBlog(_id)} dangerouslySetInnerHTML={{__html: content.slice(0,135)}} ></p>
                 {
                     (user && admin) && <div className='flex items-center space-x-3 mt-3'>
                         <button onClick={() => updateBlog(_id)} className='w-28 h-10 font-medium rounded bg-indigo-500 hover:bg-indigo-600 text-white'>Update</button>

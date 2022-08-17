@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Navbar from '../Home/Navbar/Navbar';
 import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
+import JoditEditor from "jodit-react";
+import { useRef } from 'react';
 
 const Dashboard = () => {
     const imageStorageKey = '30d0988b728015c640046cca688a5225';
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const editor = useRef(null);
+    const [text, setText] = useState("");
 
     const [user] = useAuthState(auth);
 
@@ -26,7 +30,7 @@ const Dashboard = () => {
                     const img = result.data.url;
                     const blog = {
                         title: data.title,
-                        content: data.content,
+                        content: text,
                         img: img,
                         email: user?.email
                     }
@@ -43,6 +47,7 @@ const Dashboard = () => {
                             if (inserted.insertedId) {
                                 toast.success('Blog added successfully')
                                 reset();
+                                setText('');
                             }
                             else {
                                 toast.error('Failed to add the blog');
@@ -74,7 +79,7 @@ const Dashboard = () => {
                     </label>
                     <input
                         type="file"
-                        className="w-72 md:w-96 lg:w-[500px] mx-auto mb-3"
+                        className="w-72 md:w-96 lg:w-[500px] mx-auto mb-4"
                         {...register("image", {
                             required: {
                                 value: true,
@@ -85,7 +90,7 @@ const Dashboard = () => {
                     <label className="label">
                         {errors.image?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.image.message}</span>}
                     </label>
-                    <textarea
+                    {/* <textarea
                         type="text"
                         placeholder="Content"
                         className="border rounded-lg w-72 md:w-96 lg:w-[500px] h-44 px-4 pt-2 focus:outline-none bg-gray-100 mb-4 mt-1"
@@ -98,7 +103,14 @@ const Dashboard = () => {
                     />
                     <label className="label">
                         {errors.content?.type === 'required' && <span className="label-text-alt text-red-500 mb-4">{errors.content.message}</span>}
-                    </label>
+                    </label> */}
+                    <div className='mb-4'>
+                        <JoditEditor
+                            ref={editor}
+                            tabIndex={1}
+                            onBlur={newContent => setText(newContent)}
+                        />
+                    </div>
                     <button className='w-72 md:w-96 lg:w-[500px] mx-auto font-medium text-xl tracking-wide rounded-lg text-stone-100 transition-foc duration-500 ease-in-out bg-purple-500 hover:bg-purple-600 p-2 mb-5' type='submit'>Post</button>
                 </form>
             </div>

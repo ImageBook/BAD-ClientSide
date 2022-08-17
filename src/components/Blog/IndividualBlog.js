@@ -6,6 +6,7 @@ import Navbar from '../Home/Navbar/Navbar';
 // import { FaUserCircle } from 'react-icons/fa';
 import ServiceContact from '../Services/ServiceContact';
 import ServiceFooter from '../Services/ServiceFooter';
+// import parse from 'html-react-parser';
 
 const IndividualBlog = () => {
     const { id } = useParams();
@@ -18,6 +19,7 @@ const IndividualBlog = () => {
     }, [id]);
 
     const { email, title, img, content } = blog;
+    // const text = parse(content);
     // console.log('blog image', img);
 
     return (
@@ -35,7 +37,7 @@ const IndividualBlog = () => {
                     <img className='rounded-lg w-full' src={img} alt="" />
                 </div>
                 <div className='w-full md:w-1/2 mx-auto text-lg lg:text-xl'>
-                    <p className='text-lg lg:text-xl'>{content}</p>
+                    <p className='text-lg lg:text-xl'  dangerouslySetInnerHTML={{__html: content}}></p>
                 </div>
             </div>
             <ServiceContact></ServiceContact>
