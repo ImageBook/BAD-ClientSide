@@ -32,17 +32,17 @@ const Vpromise = () => {
                             data-aos-duration="1000"
                             data-aos-offset="50" className='flex gap-x-8 mb-12 lg:mb-20'>
                             <div className='-mt-10 lg:-mt-20'>
-                                <img className='w-[140px] sm:w-[180px] md:w-[250px] lg:w-[180px] xl:w-[230px] 2xl:w-[280px] rounded-xl shadow-slate-300 shadow-lg transition-transform duration-500 ease-in-out hover:-translate-y-1' src={img1} alt="" />
+                                <img className='w-[140px] sm:w-[180px] md:w-[250px] lg:w-[180px] xl:w-[230px] 2xl:w-[280px] transition-transform duration-500 ease-in-out hover:-translate-y-1' src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/reefill-phone-1-small2x.png" alt="" />
                             </div>
-                            <img className='w-[140px] sm:w-[180px] md:w-[250px] lg:w-[180px] xl:w-[230px] 2xl:w-[280px] rounded-xl shadow-slate-300 shadow-lg transition duration-500 ease-in-out hover:-translate-y-1' src={img2} alt="" />
+                            <img className='w-[140px] sm:w-[180px] md:w-[250px] lg:w-[180px] xl:w-[230px] 2xl:w-[280px] transition duration-500 ease-in-out hover:-translate-y-1' src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/reefill-phone-2-small2x.png" alt="" />
                         </div>
                         <div data-aos="fade-down"
                             data-aos-duration="1000"
                             data-aos-offset="50" className='flex gap-x-8'>
                             <div className='-mt-10 lg:-mt-20'>
-                                <img className='w-[140px] sm:w-[180px] md:w-[250px] lg:w-[180px] xl:w-[230px] 2xl:w-[280px] rounded-xl shadow-slate-300 shadow-lg transition duration-500 ease-in-out hover:-translate-y-1' src={img3} alt="" />
+                                <img className='w-[140px] sm:w-[180px] md:w-[250px] lg:w-[180px] xl:w-[230px] 2xl:w-[280px] transition duration-500 ease-in-out hover:-translate-y-1' src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/reefill-phone-3-small2x.png" alt="" />
                             </div>
-                            <img className='w-[140px] sm:w-[180px] md:w-[250px] lg:w-[180px] xl:w-[230px] 2xl:w-[280px] rounded-xl shadow-slate-300 shadow-lg transition duration-500 ease-in-out hover:-translate-y-1' src={img4} alt="" />
+                            <img className='w-[140px] sm:w-[180px] md:w-[250px] lg:w-[180px] xl:w-[230px] 2xl:w-[280px] transition duration-500 ease-in-out hover:-translate-y-1' src="https://messapps.com/wp-content/themes/twentysixteen/images/newdesign/reefill-phone-4-small2x.png" alt="" />
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ const DiGiTALBase = () => {
 
     return (
         <div>
-            <div ref={ref}>
+            <div id="digital-base" ref={ref}>
                 <div className='flex flex-col lg:flex-row lg:justify-between items-center gap-16 lg:gap-0 lg:h-screen mt-32 w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto'>
                     <div style={{
                         transform: isInView ? "none" : "translateX(200px)",

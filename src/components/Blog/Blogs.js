@@ -74,11 +74,7 @@ const Blogs = () => {
                     <p className='font-semibold text-xl mb-2'>Business Intelligence in Mobile App Development</p>
                     <p>Business intelligence is an integrated software platform that is used for business data analysis and management ...</p>
                 </div>
-
             </div>
-            {/* <div className='flex items-center justify-center mt-10 lg:mt-16'>
-                <button className='w-40 py-2 border bg-gray-50 rounded-lg font-semibold hover:bg-gray-100'>Show All</button>
-            </div> */}
         </div>
     );
 };

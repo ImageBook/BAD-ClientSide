@@ -32,9 +32,9 @@ const Home = () => {
             <div className='bg-white'>
                 <div className='hidden lg:block'>
                     <div className='fixed bottom-16 lg:left-3 xl:left-10 2xl:left-16'>
-                        <HashLink to='/#ground-central' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
-                        <HashLink to='/#runon' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
-                        <HashLink to='/#cakemix' smooth><GoPrimitiveDot className='w-[14px] h-[14px] text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                        <HashLink to='/#digital-base' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                        <HashLink to='/#hirebuddy' smooth><GoPrimitiveDot className='w-[14px] h-[14px] mb-1 text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
+                        <HashLink to='/#colio' smooth><GoPrimitiveDot className='w-[14px] h-[14px] text-[#550b57] hover:text-[#b217b8]'></GoPrimitiveDot></HashLink>
                     </div>
                 </div>
             </div>

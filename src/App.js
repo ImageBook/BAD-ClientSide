@@ -8,16 +8,22 @@ import AdNetworkBlog from './components/Blog/AdNetworkBlog';
 import AnnouncementBlog from './components/Blog/AnnouncementBlog';
 import Blog from './components/Blog/Blog';
 import BusinessBlog from './components/Blog/BusinessBlog';
+import Casestudies from './components/Blog/Casestudies/Casestudies';
 import CombinatorBlog from './components/Blog/CombinatorBlog';
+import Design from './components/Blog/Design/Design';
+import Development from './components/Blog/Development/Development';
 import FirstMobileAppBlog from './components/Blog/FirstMobileAppBlog';
 import Flutter from './components/Blog/Flutter';
+import Guides from './components/Blog/Guides/Guides';
 import HowMuchAppWorth from './components/Blog/HowMuchAppWorth';
 import IndividualBlog from './components/Blog/IndividualBlog';
 import IosDesignBlog from './components/Blog/IosDesignBlog';
 import KnnBlog from './components/Blog/KnnBlog';
+import Marketing from './components/Blog/Marketing/Marketing';
 import MockupMistakeBlog from './components/Blog/MockupMistakeBlog';
 import PopularApiBlog from './components/Blog/PopularApiBlog';
 import RejectedAppBlog from './components/Blog/RejectedAppBlog';
+import Strategy from './components/Blog/Strategy/Strategy';
 import UpdateBlog from './components/Blog/UpdateBlog';
 import Careers from './components/Careers/Careers';
 import CrossPlatformServices from './components/CrossPlatformServices/CrossPlatformServices';
@@ -42,6 +48,7 @@ import DigitalBasePage from './components/Portfolio/DigitalBasePage/DigitalBaseP
 // import HalsaPage from './components/Portfolio/HalsaPage/HalsaPage';
 import HirebuddyPage from './components/Portfolio/HirebuddyPage/HirebuddyPage';
 import Portfolio from './components/Portfolio/Portfolio';
+import VpromisePage from './components/Portfolio/VpromisePage/VpromisePage';
 // import ReefillPage from './components/Portfolio/ReefillPage/ReefillPage';
 // import RunonPage from './components/Portfolio/RunonPage/RunonPage';
 import Services from './components/Services/Services';
@@ -64,7 +71,7 @@ function App() {
             <Route path='/digital-base' element={<DigitalBasePage></DigitalBasePage>}></Route>
             <Route path='/hirebuddy' element={<HirebuddyPage></HirebuddyPage>}></Route>
             <Route path='/colio' element={<ColioPage></ColioPage>}></Route>
-            <Route path='/vpromise' element={<ColioPage></ColioPage>}></Route>
+            <Route path='/vpromise' element={<VpromisePage></VpromisePage>}></Route>
             {/* <Route path='/halsa-life' element={<HalsaPage></HalsaPage>}></Route> */}
             {/* <Route path='/ar-dart' element={<ArDartPage></ArDartPage>}></Route> */}
             {/* <Route path='/ground-central' element={<GroundCentralPage></GroundCentralPage>}></Route> */}
@@ -76,6 +83,12 @@ function App() {
             <Route path='/login' element={<Login></Login>}></Route>
             {/* <Route path='/signup' element={<SignUp></SignUp>}></Route> */}
             <Route path='/blog' element={<Blog></Blog>}></Route>
+            <Route path='/blog/casestudies' element={<Casestudies></Casestudies>}></Route>
+            <Route path='/blog/design' element={<Design></Design>}></Route>
+            <Route path='/blog/development' element={<Development></Development>}></Route>
+            <Route path='/blog/guides' element={<Guides></Guides>}></Route>
+            <Route path='/blog/marketing' element={<Marketing></Marketing>}></Route>
+            <Route path='/blog/strategy' element={<Strategy></Strategy>}></Route>
             <Route path='/blog/:id' element={<IndividualBlog></IndividualBlog>}></Route>
             <Route path='/blog-update/:id' element={<UpdateBlog></UpdateBlog>}></Route>
             <Route path='/dashboard' element={

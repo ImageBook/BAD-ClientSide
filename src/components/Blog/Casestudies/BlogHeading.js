@@ -25,11 +25,11 @@ const BlogHeading = () => {
         <div className='w-11/12 md:w-5/6 lg:w-11/12 xl:w-5/6 2xl:w-full mx-auto my-10 lg:my-20 px-2 lg:px-10'>
             <div className='flex flex-col md:flex-row items-center md:items-start gap-6 lg:gap-16'>
                 <div>
-                    <p className='text-[48px] lg:text-[88px] font-black text-[#383841] leading-none tracking-wide'>BLOG</p>
+                    <p className='text-[40px] lg:text-[60px] font-bold text-[#383841] leading-none tracking-wide'>casestudies</p>
                 </div>
                 <div className='flex flex-wrap justify-center lg:justify-start gap-3 lg:gap-6'>
                     <div onClick={link1} className='border bg-[#FAFAFA] rounded-lg py-2 inline-block w-[135px] text-center hover:cursor-pointer'>
-                        <p className='text-gray-700 hover:text-[#cc0ccf] transition duration-300 ease-in-out'>#casestudies</p>
+                        <p className='text-[#cc0ccf]'>#casestudies</p>
                     </div>
                     <div onClick={link2} className='border bg-[#FAFAFA] rounded-lg py-2 inline-block w-[135px] text-center hover:cursor-pointer'>
                         <p className='text-gray-700 hover:text-[#cc0ccf] transition duration-300 ease-in-out'>#design</p>
