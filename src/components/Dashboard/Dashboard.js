@@ -6,27 +6,8 @@ import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 import JoditEditor from "jodit-react";
 import { useRef } from 'react';
-import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 
-const container = {
-    hidden: { opacity: 1 },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            delayChildren: 0.3,
-            staggerDirection: -1
-        },
-    },
-}
-
-const child = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-        y: 0, opacity: 1
-    }
-}
 
 const Dashboard = () => {
     const imageStorageKey = '30d0988b728015c640046cca688a5225';
@@ -142,14 +123,16 @@ const Dashboard = () => {
                 </form>
                 {
                     modal &&
-                    <motion.div variants={container} className='absolute top-1/3 left-[12px] sm:left-6 md:left-12 lg:left-40 xl:left-[270px] 2xl:left-[310px] flex flex-col items-center justify-center w-11/12 md:w-5/6 lg:w-4/6 xl:w-1/2 mx-auto rounded bg-gray-200 px-5 py-3'>
-                        <motion.p variants={child} className='font-bold text-xl md:text-2xl leading-tight mb-1 mt-3 text-center'>Your blog is successfully posted!</motion.p>
-                        <motion.p variants={child} className='font-medium text-xl mb-3 text-center'>Do you want to see all your blogs?</motion.p>
-                        <motion.div variants={child} className='flex items-center mb-4 space-x-4'>
+                    <div data-aos="fade-down"
+                        data-aos-duration="500"
+                        data-aos-offset="200" className='absolute top-1/3 left-[12px] sm:left-6 md:left-12 lg:left-40 xl:left-[270px] 2xl:left-[310px] flex flex-col items-center justify-center w-11/12 md:w-5/6 lg:w-4/6 xl:w-1/2 mx-auto rounded bg-gray-200 px-5 py-3'>
+                        <p className='font-bold text-xl md:text-2xl leading-tight mb-1 mt-3 text-center'>Your blog is successfully posted!</p>
+                        <p className='font-medium text-xl mb-3 text-center'>Do you want to see all your blogs?</p>
+                        <div className='flex items-center mb-4 space-x-4'>
                             <button onClick={goToBlog} className='bg-emerald-500 text-white hover:bg-emerald-600 transition duration-500 ease-in-out px-5 py-2 rounded-lg font-medium text-lg tracking-wide'>Yes</button>
                             <button onClick={() => setModal(false)} className='bg-red-500 text-white hover:bg-red-600 transition duration-500 ease-in-out px-3 py-2 rounded-lg font-medium text-lg tracking-wide'>Later</button>
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 }
             </div>
         </div>
