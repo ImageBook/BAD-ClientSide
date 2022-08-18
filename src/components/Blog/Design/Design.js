@@ -21,7 +21,7 @@ const Design = () => {
                 </HashLink>
             </div>
             <BlogsHeading></BlogsHeading>
-            <FeaturedBlog></FeaturedBlog>
+            {/* <FeaturedBlog></FeaturedBlog> */}
             <Blogs></Blogs>
             <div className='px-2 lg:px-10'>
                 <ServiceContact></ServiceContact>

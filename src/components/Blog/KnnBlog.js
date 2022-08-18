@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../Home/Navbar/Navbar';
 import ServiceContact from '../Services/ServiceContact';
 import ServiceFooter from '../Services/ServiceFooter';
-import { FaUserCircle } from 'react-icons/fa';
+// import { FaUserCircle } from 'react-icons/fa';
 
 const KnnBlog = () => {
     return (
@@ -12,8 +12,8 @@ const KnnBlog = () => {
                 <p className='w-full md:w-1/2 mx-auto text-left font-bold leading-none text-[40px] lg:text-[52px] mb-6'>KMM as a New Approach to Cross-platform App Development</p>
                 <div className='w-full md:w-1/2 mx-auto mb-8'>
                     <div className='flex space-x-3 items-center'>
-                        <FaUserCircle className='w-12 h-12 text-gray-400'></FaUserCircle>
-                        <p className='text-xl font-medium pr-8'>Jaque Kallis</p>
+                        {/* <FaUserCircle className='w-12 h-12 text-gray-400'></FaUserCircle>
+                        <p className='text-xl font-medium pr-8'>Jaque Kallis</p> */}
                         <div className='border bg-[#FAFAFA] rounded-lg py-2 inline-block w-[150px] text-center'>
                             <p className='text-gray-700 hover:text-[#cc0ccf] transition duration-300 ease-in-out'>#allcategories</p>
                         </div>

@@ -9,17 +9,27 @@ import AnnouncementBlog from './components/Blog/AnnouncementBlog';
 import Blog from './components/Blog/Blog';
 import BusinessBlog from './components/Blog/BusinessBlog';
 import Casestudies from './components/Blog/Casestudies/Casestudies';
+import CaseStudies1 from './components/Blog/Casestudies/CaseStudies1';
+import CaseStudies2 from './components/Blog/Casestudies/Casestudies2';
+import CaseStudies3 from './components/Blog/Casestudies/Casestudies3';
+import CaseStudies4 from './components/Blog/Casestudies/Casestudies4';
+import CaseStudies5 from './components/Blog/Casestudies/Casestudies5';
+import CaseStudies6 from './components/Blog/Casestudies/Casestudies6';
 import CombinatorBlog from './components/Blog/CombinatorBlog';
 import Design from './components/Blog/Design/Design';
+import Design1 from './components/Blog/Design/design1';
 import Development from './components/Blog/Development/Development';
 import FirstMobileAppBlog from './components/Blog/FirstMobileAppBlog';
 import Flutter from './components/Blog/Flutter';
+import Guide2 from './components/Blog/Guides/Guide2';
+import Guide3 from './components/Blog/Guides/Guide3';
 import Guides from './components/Blog/Guides/Guides';
 import HowMuchAppWorth from './components/Blog/HowMuchAppWorth';
 import IndividualBlog from './components/Blog/IndividualBlog';
 import IosDesignBlog from './components/Blog/IosDesignBlog';
 import KnnBlog from './components/Blog/KnnBlog';
 import Marketing from './components/Blog/Marketing/Marketing';
+import Marketing2 from './components/Blog/Marketing/Marketing2';
 import MockupMistakeBlog from './components/Blog/MockupMistakeBlog';
 import PopularApiBlog from './components/Blog/PopularApiBlog';
 import RejectedAppBlog from './components/Blog/RejectedAppBlog';
@@ -96,6 +106,15 @@ function App() {
                 <Dashboard></Dashboard>
               </RequireAdmin>
             }></Route>
+            <Route path='/casestudies/ground-central-double-revenue/' element={<CaseStudies1></CaseStudies1>}></Route>
+            <Route path='/casestudies/mobile-apps-saving-lives/' element={<CaseStudies2></CaseStudies2>}></Route>
+            <Route path='/guides-allcategories/make-your-business-as-successfull-as-uber/' element={<CaseStudies3></CaseStudies3>}></Route>
+            <Route path='/casestudies/recent-media-mentions-for-apps-built-by-messapps/' element={<CaseStudies4></CaseStudies4>}></Route>
+            <Route path='/casestudies/runon-healthy-daily-routine/' element={<CaseStudies5></CaseStudies5>}></Route>
+            <Route path='/strategy/restaurant-apps-closer-look-numbers-2/' element={<CaseStudies6></CaseStudies6>}></Route>
+            <Route path='/allcategories/marketing/ios-app-development-submitting-update-2/' element={<Guide2></Guide2>}></Route>
+            <Route path='/allcategories/development/finding-ios-devices-udid-via-itunes-2/' element={<Guide3></Guide3>}></Route>
+            <Route path='/allcategories/marketing/ios-app-development-submitting-update-2/' element={<Marketing2></Marketing2>}></Route>
             <Route path='/allcategories/strategy/how-much-app-worth/' element={<HowMuchAppWorth></HowMuchAppWorth>}></Route>
             <Route path='/allcategories/development/flutter/' element={<Flutter></Flutter>}></Route>
             <Route path='/allcategories/development/kmm-new-approach-to-cross-platform-app-development/' element={<KnnBlog></KnnBlog>}></Route>
@@ -104,6 +123,7 @@ function App() {
             <Route path='/allcategories/our-client-got-accepted-to-y-combinator/' element={<CombinatorBlog></CombinatorBlog>}></Route>
             <Route path='/allcategories/bi-in-mobile-app-development/' element={<BusinessBlog></BusinessBlog>}></Route>
             <Route path='/allcategories/design/first-wireframe/' element={<FirstMobileAppBlog></FirstMobileAppBlog>}></Route>
+            <Route path='/allcategories/strategy/attracting-investors-through-design/' element={<Design1></Design1>}></Route>
             <Route path='/allcategories/strategy/making-a-mockup/' element={<MockupMistakeBlog></MockupMistakeBlog>}></Route>
             <Route path='/allcategories/design/overview-of-ios-design-guidelines/' element={<IosDesignBlog></IosDesignBlog>}></Route>
             <Route path='/allcategories/strategy/apps-get-rejected/' element={<RejectedAppBlog></RejectedAppBlog>}></Route>

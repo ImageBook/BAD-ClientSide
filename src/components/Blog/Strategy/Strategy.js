@@ -21,7 +21,7 @@ const Strategy = () => {
                 </HashLink>
             </div>
             <BlogHeading></BlogHeading>
-            <FeaturedBlog></FeaturedBlog>
+            {/* <FeaturedBlog></FeaturedBlog> */}
             <Blogs></Blogs>
             <div className='px-2 lg:px-10'>
                 <ServiceContact></ServiceContact>

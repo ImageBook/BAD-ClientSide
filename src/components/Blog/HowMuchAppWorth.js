@@ -12,8 +12,6 @@ const HowMuchAppWorth = () => {
                 <p className='w-full md:w-1/2 mx-auto text-left font-bold leading-none text-[40px] lg:text-[52px] mb-6'>How Much Your App Is Worth?</p>
                 <div className='w-full md:w-1/2 mx-auto mb-8'>
                     <div className='flex space-x-3 items-center'>
-                        <FaUserCircle className='w-12 h-12 text-gray-400'></FaUserCircle>
-                        <p className='text-xl font-medium pr-8'>Jaque Kallis</p>
                         <div className='border bg-[#FAFAFA] rounded-lg py-2 inline-block w-[120px] text-center'>
                             <p className='text-gray-700 hover:text-[#cc0ccf] transition duration-300 ease-in-out'>#strategy</p>
                         </div>
