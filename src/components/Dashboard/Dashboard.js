@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Dashboard = () => {
-    const imageStorageKey = '30d0988b728015c640046cca688a5225';
+    const imageStorageKey = 'a89df49b16267d3fa04252fa03d8ce52';
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const editor = useRef(null);
     const [text, setText] = useState("");
@@ -123,7 +123,7 @@ const Dashboard = () => {
                 </form>
                 {
                     modal &&
-                    <div data-aos="fade-down"
+                    <div data-aos="fade-up"
                         data-aos-duration="500"
                         data-aos-offset="200" className='absolute top-1/3 left-[12px] sm:left-6 md:left-12 lg:left-40 xl:left-[270px] 2xl:left-[310px] flex flex-col items-center justify-center w-11/12 md:w-5/6 lg:w-4/6 xl:w-1/2 mx-auto rounded bg-gray-200 px-5 py-3'>
                         <p className='font-bold text-xl md:text-2xl leading-tight mb-1 mt-3 text-center'>Your blog is successfully posted!</p>
