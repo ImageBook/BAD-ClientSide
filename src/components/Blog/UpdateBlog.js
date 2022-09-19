@@ -29,9 +29,7 @@ const UpdateBlog = () => {
             .then(data => setBlog(data))
     }, [id]);
 
-    // const handleChange = (e, editor) => {
-    //     setText((editor.getData()));
-    // }
+    
 
     const { title, content } = blog;
 
