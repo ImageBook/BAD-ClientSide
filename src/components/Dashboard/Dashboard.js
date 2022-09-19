@@ -7,10 +7,11 @@ import { useForm } from "react-hook-form";
 import JoditEditor from "jodit-react";
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 const Dashboard = () => {
-    const imageStorageKey = 'a89df49b16267d3fa04252fa03d8ce52';
+    // const imageStorageKey = 'a89df49b16267d3fa04252fa03d8ce52';
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const editor = useRef(null);
     const [text, setText] = useState("");
@@ -25,44 +26,77 @@ const Dashboard = () => {
     const onSubmit = async data => {
         const image = data.image[0];
         const formData = new FormData();
-        formData.append('image', image);
-        const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
-        fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-            .then(res => res.json())
-            .then(result => {
-                if (result.success) {
-                    const img = result.data.url;
-                    const blog = {
-                        title: data.title,
-                        content: text,
-                        img: img,
-                        email: user?.email
-                    }
-                    // post to database 
-                    fetch('https://pure-cove-10523.herokuapp.com/blogs', {
-                        method: 'POST',
-                        headers: {
-                            'content-type': 'application/json',
-                        },
-                        body: JSON.stringify(blog)
-                    })
-                        .then(res => res.json())
-                        .then(inserted => {
-                            if (inserted.insertedId) {
-                                setModal(true);
-                                toast.success('Blog added successfully')
-                                reset();
-                                setText('');
-                            }
-                            else {
-                                toast.error('Failed to add the blog');
-                            }
-                        })
+        formData.append('file', image);
+        formData.append("upload_preset", "kghszgfx");
+        axios.post("https://api.cloudinary.com/v1_1/dewunyk7d/image/upload", formData).then((response) => {
+            console.log('url', response.data.secure_url);
+            if (response.status === 200) {
+                const img = response.data.secure_url;
+                const blog = {
+                    title: data.title,
+                    content: text,
+                    img: img,
+                    email: user?.email
                 }
-            })
+                // post to database 
+                fetch('https://pure-cove-10523.herokuapp.com/blogs', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json',
+                    },
+                    body: JSON.stringify(blog)
+                })
+                    .then(res => res.json())
+                    .then(inserted => {
+                        if (inserted.insertedId) {
+                            setModal(true);
+                            toast.success('Blog added successfully')
+                            reset();
+                            setText('');
+                        }
+                        else {
+                            toast.error('Failed to add the blog');
+                        }
+                    })
+            }
+        })
+        // const url = `https://api.cloudinary.com/v1_1/dewunyk7d/image/upload`;
+        // fetch(url, {
+        //     method: 'POST',
+        //     body: formData
+        // })
+        //     .then(res => res.json())
+        //     .then(result => {
+        //         if (result.status === 200) {
+        //             const img = result.data.secure_url;
+        //             const blog = {
+        //                 title: data.title,
+        //                 content: text,
+        //                 img: img,
+        //                 email: user?.email
+        //             }
+        //             // post to database 
+        //             fetch('https://pure-cove-10523.herokuapp.com/blogs', {
+        //                 method: 'POST',
+        //                 headers: {
+        //                     'content-type': 'application/json',
+        //                 },
+        //                 body: JSON.stringify(blog)
+        //             })
+        //                 .then(res => res.json())
+        //                 .then(inserted => {
+        //                     if (inserted.insertedId) {
+        //                         setModal(true);
+        //                         toast.success('Blog added successfully')
+        //                         reset();
+        //                         setText('');
+        //                     }
+        //                     else {
+        //                         toast.error('Failed to add the blog');
+        //                     }
+        //                 })
+        //         }
+        //     })
     }
 
     return (

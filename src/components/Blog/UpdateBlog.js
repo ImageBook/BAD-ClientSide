@@ -8,6 +8,7 @@ import auth from '../../firebase.init';
 // import parse from 'html-react-parser';
 import JoditEditor from "jodit-react";
 import { useRef } from 'react';
+import axios from 'axios';
 // import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 // import { CKEditor } from '@ckeditor/ckeditor5-react';
 // import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
@@ -18,7 +19,7 @@ const UpdateBlog = () => {
     const { id } = useParams();
     const [blog, setBlog] = useState({});
     const [user] = useAuthState(auth);
-    const imageStorageKey = '30d0988b728015c640046cca688a5225';
+    // const imageStorageKey = '30d0988b728015c640046cca688a5225';
     const editor = useRef(null);
     const [text, setText] = useState("");
 
@@ -37,46 +38,77 @@ const UpdateBlog = () => {
     const onSubmit = async data => {
         const image = data.image[0];
         const formData = new FormData();
-        formData.append('image', image);
-        const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
-        fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-            .then(res => res.json())
-            .then(result => {
-                if (result.success) {
-                    const img = result.data.url;
-                    // const description = String(text);
-                    // const description = JSON.parse(text);
-                    const blog = {
-                        title: data.title,
-                        // content: data.content,
-                        content: text,
-                        img: img,
-                        email: user?.email
-                    }
-                    // console.log('update blog', blog);
-
-                    // update blog on database 
-                    fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`, {
-                        method: 'PATCH',
-                        headers: {
-                            'content-type': 'application/json',
-                        },
-                        body: JSON.stringify(blog)
-                    })
-                        .then(res => res.json())
-                        .then(data => {
-                            // console.log('data', data)
-                            if (data.modifiedCount > 0) {
-                                // console.log('success');
-                                toast.success("The Blog is updated successfully");
-                                reset();
-                            }
-                        })
+        formData.append('file', image);
+        formData.append("upload_preset", "kghszgfx");
+        axios.post("https://api.cloudinary.com/v1_1/dewunyk7d/image/upload", formData).then((response) => {
+            console.log('url', response.data.secure_url);
+            if (response.status === 200) {
+                const img = response.data.url;
+                const blog = {
+                    title: data.title,
+                    content: text,
+                    img: img,
+                    email: user?.email
                 }
-            })
+                // console.log('update blog', blog);
+
+                // update blog on database 
+                fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'content-type': 'application/json',
+                    },
+                    body: JSON.stringify(blog)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        // console.log('data', data)
+                        if (data.modifiedCount > 0) {
+                            // console.log('success');
+                            toast.success("The Blog is updated successfully");
+                            reset();
+                        }
+                    })
+            }
+        })
+
+
+        // const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
+        // fetch(url, {
+        //     method: 'POST',
+        //     body: formData
+        // })
+        //     .then(res => res.json())
+        //     .then(result => {
+        //         if (result.success) {
+        //             const img = result.data.url;
+        //             const blog = {
+        //                 title: data.title,
+        //                 content: text,
+        //                 img: img,
+        //                 email: user?.email
+        //             }
+        //             // console.log('update blog', blog);
+
+        //             // update blog on database 
+        //             fetch(`https://pure-cove-10523.herokuapp.com/blogs/${id}`, {
+        //                 method: 'PATCH',
+        //                 headers: {
+        //                     'content-type': 'application/json',
+        //                 },
+        //                 body: JSON.stringify(blog)
+        //             })
+        //                 .then(res => res.json())
+        //                 .then(data => {
+        //                     // console.log('data', data)
+        //                     if (data.modifiedCount > 0) {
+        //                         // console.log('success');
+        //                         toast.success("The Blog is updated successfully");
+        //                         reset();
+        //                     }
+        //                 })
+        //         }
+        //     })
     }
 
     return (
